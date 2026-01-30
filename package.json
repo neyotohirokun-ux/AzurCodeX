@@ -1,0 +1,58 @@
+{
+  "name": "azur_code_x",
+  "private": true,
+  "version": "0.0.1",
+  "author": "Neyoto Hiro <neyotohirokun@gmail.com>",
+  "type": "module",
+  "main": "out/main/main.js",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "dist": "electron-vite build && electron-builder",
+    "lint": "eslint ."
+  },
+  "build": {
+    "appId": "com.neyoto.azurcodex",
+    "productName": "Azur CodeX",
+    "files": [
+      "out/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "src/renderer/public/build-icon/mk1-526x2.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "src/renderer/public/license.txt",
+      "installerIcon": "src/renderer/public/build-icon/qicon.ico",
+      "uninstallerIcon": "src/renderer/public/build-icon/qicon.ico",
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Azur CodeX"
+    }
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "electron": "^40.1.0",
+    "electron-builder": "^26.4.0",
+    "electron-vite": "^5.0.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4"
+  }
+}
