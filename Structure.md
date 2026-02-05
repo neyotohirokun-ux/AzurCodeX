@@ -1,26 +1,41 @@
 # File Tree: AzurCodeX
 
-**Generated:** 1/30/2026, 6:49:47 PM
+**Generated:** 2/5/2026, 11:58:49 AM
 **Root Path:** `c:\Users\HP\Desktop\AzurCodeX`
 
 ```
-├── 📁 public
-│   └── 🖼️ vite.svg
 ├── 📁 src
-│   ├── 📁 assets
-│   │   └── 🖼️ react.svg
 │   ├── 📁 main
 │   │   └── 📄 main.ts
 │   ├── 📁 preload
 │   │   └── 📄 preload.ts
 │   └── 📁 renderer
+│       ├── 📁 public
+│       │   ├── 📁 build-icon
+│       │   │   ├── 🖼️ ACXLogo250x100.png
+│       │   │   ├── 🖼️ ACXLogo250x100.svg
+│       │   │   ├── 🖼️ MK1.svg
+│       │   │   ├── 🖼️ azur-lane-logo.jpg
+│       │   │   ├── 🖼️ azurlanelogo.png
+│       │   │   ├── 📄 mk1-526x2.ico
+│       │   │   ├── 🖼️ mk1.png
+│       │   │   └── 📄 qicon.ico
+│       │   ├── 📄 LICENSE.txt
+│       │   └── 🖼️ vite.svg
 │       ├── 📁 src
+│       │   ├── 📁 assets
+│       │   │   └── 🖼️ react.svg
+│       │   ├── 📁 pages
 │       │   ├── 🎨 App.css
 │       │   ├── 📄 App.tsx
+│       │   ├── 📄 i18n.tsx
 │       │   ├── 🎨 index.css
 │       │   └── 📄 main.tsx
 │       └── 🌐 index.html
+├── ⚙️ .gitattributes
 ├── ⚙️ .gitignore
+├── 📄 DISCLAIMER.txt
+├── 📄 LICENSE.txt
 ├── 📝 README.md
 ├── 📝 Structure.md
 ├── 📄 electron-vite.config.js

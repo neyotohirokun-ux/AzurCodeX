@@ -12449,16 +12449,16 @@ function requireClient() {
   return client.exports;
 }
 var clientExports = requireClient();
-const reactLogo = "" + new URL("react-CHdo91hT.svg", import.meta.url).href;
-const viteLogo = "" + new URL("../vite.svg", import.meta.url).href;
+const azLogo = "" + new URL("../build-icon/azurlanelogo.png", import.meta.url).href;
+const mk1Logo = "" + new URL("../build-icon/MK1.svg", import.meta.url).href;
 function App() {
   const [count, setCount] = reactExports.useState(0);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://vite.dev", target: "_blank", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: viteLogo, className: "logo", alt: "Vite logo" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://react.dev", target: "_blank", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: reactLogo, className: "logo react", alt: "React logo" }) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "", target: "_blank", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: mk1Logo, className: "logo", alt: "MK1 logo" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "", target: "_blank", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: azLogo, className: "logo azurlane", alt: "Azur Lane logo" }) })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { children: "Vite + React" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { children: "Azur Lane CodeX" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "card", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => setCount((count2) => count2 + 1), children: [
         "count is ",
