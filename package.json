@@ -1,7 +1,7 @@
 {
   "name": "azur_code_x",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Neyoto Hiro <neyotohirokun@gmail.com>",
   "type": "module",
   "main": "out/main/main.js",
@@ -15,32 +15,23 @@
   "build": {
     "appId": "com.neyoto.azurcodex",
     "productName": "Azur CodeX",
-
     "files": [
       "out/**/*"
     ],
-
     "compression": "normal",
-
     "win": {
       "target": "nsis",
       "icon": "src/renderer/public/build-icon/mk1-526x2.ico"
     },
-
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-
       "perMachine": true,
       "allowElevation": true,
-
       "runAfterFinish": false,
-
       "license": "src/renderer/public/license.txt",
-
       "installerIcon": "src/renderer/public/build-icon/qicon.ico",
       "uninstallerIcon": "src/renderer/public/build-icon/qicon.ico",
-
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "Azur CodeX"
