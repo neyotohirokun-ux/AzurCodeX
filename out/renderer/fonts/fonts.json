@@ -2,6 +2,7 @@
   "fonts": [
     { "id": "dejavu", "label": "DejaVu Sans" },
     { "id": "poppins", "label": "Poppins" },
-    { "id": "helvetica", "label": "Helvetica" }
+    { "id": "helvetica", "label": "Helvetica" },
+    { "id": "inter", "label": "Inter" }
   ]
 }

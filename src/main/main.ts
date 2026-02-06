@@ -1,93 +1,86 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 let mainWindow: BrowserWindow | null = null;
 let splashWindow: BrowserWindow | null = null;
 
 function createWindow() {
-  // --- Splash window ---
+  /* ───────── Splash Window ───────── */
   splashWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
-    fullscreen: true,
+    width: 480,
+    height: 270,
     frame: false,
-    alwaysOnTop: true,
     transparent: true,
     resizable: false,
+    alwaysOnTop: true,
     show: true,
-    skipTaskbar: false, // ensures visible in Alt+Tab
+    backgroundColor: '#00000000',
+    webPreferences: {
+      devTools: false
+    }
   });
 
-  // --- Splash path ---
   const splashPath = app.isPackaged
-    ? path.join(__dirname, 'splash.html')       // prod
-    : path.join(__dirname, '../renderer/splash.html'); // dev
+    ? path.join(__dirname, 'splash.html')
+    : path.join(__dirname, '../renderer/splash.html');
 
-  console.log('Splash path being loaded:', splashPath);
-  splashWindow.loadFile(splashPath).catch(err =>
-    console.error('Failed to load splash:', err)
-  );
+  splashWindow.loadFile(splashPath).catch(console.error);
 
-
-  // --- Main window ---
+  /* ───────── Main Window ───────── */
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
     fullscreen: true,
-    show: false, // hide until ready
+    show: false,
+    backgroundColor: '#0b0b0b',
+    autoHideMenuBar: true,
     webPreferences: {
       preload: path.join(__dirname, '../preload/preload.mjs'),
       nodeIntegration: false,
-      contextIsolation: true,
-    },
-    autoHideMenuBar: true,
+      contextIsolation: true
+    }
   });
 
-  // Load dev server or production index
   if (process.env.NODE_ENV === 'development') {
-    mainWindow.loadURL('http://localhost:5173').catch(err => console.error('Failed to load dev server:', err));
+    mainWindow.loadURL('http://localhost:5173').catch(console.error);
   } else {
-    mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'))
-      .catch(err => console.error('Failed to load index.html:', err));
+    mainWindow.loadFile(
+      path.join(__dirname, '../renderer/index.html')
+    ).catch(console.error);
   }
 
-  // --- Show main window when ready ---
+  /* ───────── Reveal ONLY when ready ───────── */
   mainWindow.once('ready-to-show', () => {
-    if (splashWindow) {
-      splashWindow.close();
+    if (splashWindow && !splashWindow.isDestroyed()) {
+      splashWindow.destroy();   // destroy > close
       splashWindow = null;
     }
     mainWindow?.show();
   });
 
-  // --- Safety fallback in case ready-to-show never fires (slow first load) ---
-  setTimeout(() => {
-    if (splashWindow) {
-      splashWindow.close();
-      splashWindow = null;
-    }
-    if (mainWindow && !mainWindow.isVisible()) {
-      mainWindow.show();
-    }
-  }, 5000);
-
-  // --- Cleanup on close ---
+  /* ───────── Cleanup ───────── */
   mainWindow.on('closed', () => {
     mainWindow = null;
-    if (splashWindow) {
-      splashWindow.close();
+    if (splashWindow && !splashWindow.isDestroyed()) {
+      splashWindow.destroy();
       splashWindow = null;
     }
   });
 }
 
-// --- App event listeners ---
-app.on('ready', createWindow);
+/* ───────── App lifecycle ───────── */
+app.whenReady().then(createWindow);
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
 
 app.on('activate', () => {
-  if (!mainWindow) createWindow();
+  if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
+
+/* ───────── End of main.ts ───────── */

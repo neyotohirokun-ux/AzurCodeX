@@ -3,34 +3,38 @@
 <head>
   <style>
     body {
-      background: #0b0f1a;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      font-family: system-ui, sans-serif;
+        background: transparent;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .loader {
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        border-top: 5px solid #ffffff;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: auto;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
     }
 
   </style>
-  <link rel="stylesheet" href="./App.css">
 </head>
 <body>
-  <div>
-    <div>
-        <a href="" target="_blank">
+  <div class="loader-container">
+      <!-- Add your logo/loading animation here -->
+       <a href="" target="_blank">
           <img src="build-icon/mk1Logo" className="logo" alt="MK1 logo" />
         </a>
-        <a href="" target="_blank">
-          <img src="build-icon/azLogo" className="logo azurlane" alt="Azur Lane logo" />
-        </a>
-      </div>
-      <h1>Azur Lane CodeX</h1>
-      <div className="card">
-        <p>
-          Loading... Please wait while we prepare the application for you. This may take a few moments, especially on the first launch. Thank you for your patience!
-        </p>
-      </div>
+      <h3>Application Loading...</h3>
+      <div class="loader"></div>
   </div>
 </body>
 </html>
