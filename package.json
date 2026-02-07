@@ -1,7 +1,7 @@
 {
   "name": "azur_code_x",
   "private": true,
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "Neyoto Hiro <neyotohirokun@gmail.com>",
   "type": "module",
   "main": "out/main/main.js",
@@ -15,29 +15,26 @@
   "build": {
     "appId": "com.neyoto.azurcodex",
     "productName": "Azur CodeX",
-
     "asar": true,
     "compression": "maximum",
-
     "files": [
       "out/**/*"
     ],
-
     "directories": {
       "buildResources": "src/renderer/public"
     },
-
     "win": {
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "icon": "src/renderer/public/img/iconlogo/mk1-526x2.ico",
       "signAndEditExecutable": false
     },
-
     "nsis": {
       "oneClick": false,
       "perMachine": true,
@@ -52,7 +49,6 @@
       "shortcutName": "Azur CodeX"
     }
   },
-
   "dependencies": {
     "i18next": "^25.8.0",
     "lucide-react": "^0.563.0",
@@ -60,7 +56,6 @@
     "react-dom": "^19.2.0",
     "react-i18next": "^16.5.4"
   },
-
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
