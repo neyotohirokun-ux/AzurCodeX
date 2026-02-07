@@ -1,0 +1,52 @@
+{
+  "skins": [
+    {
+      "id": 100000,
+      "gid": 10000,
+
+      "nameKey": "ship.10000.skin.100000.name",
+      "descKey": "ship.10000.skin.100000.desc",
+      "typeKey": "ui.skinType.default",
+      
+      "tag": [],
+      "illustrator": 1,
+      "illustrator2": -1,
+      "voice_actor": 72,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": null,
+      "background2": null,
+      "painting": "portrait/sprites/10000/100000/painting.png",
+      "painting_n": "portrait/sprites/10000/100000/painting_n.png",
+      "banner": "portrait/sprites/10000/100000/banner.png",
+      "chibi": "portrait/sprites/10000/100000/chibi.png",
+      "icon": "portrait/sprites/10000/100000/icon.png",
+      "qicon": "portrait/sprites/10000/100000/qicon.png",
+      "shipyard": "portrait/sprites/10000/100000/shipyard.png"
+    },
+    {
+      "id": 100001,
+      "gid": 10000,
+
+      "nameKey": "ship.10000.skin.100001.name",
+      "descKey": "ship.10000.skin.100001.desc",
+      "typeKey": "ui.skinType.others",
+      
+      "tag": [],
+      "illustrator": 1,
+      "illustrator2": -1,
+      "voice_actor": 72,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": null,
+      "background2": null,
+      "painting": "portrait/sprites/10000/100001/painting.png",
+      "painting_n": "portrait/sprites/10000/100001/painting_n.png",
+      "banner": "portrait/sprites/10000/100001/banner.png",
+      "chibi": "portrait/sprites/10000/100001/chibi.png",
+      "icon": "portrait/sprites/10000/100001/icon.png",
+      "qicon": "portrait/sprites/10000/100001/qicon.png",
+      "shipyard": "portrait/sprites/10000/100001/shipyard.png"
+    }
+  ]
+}

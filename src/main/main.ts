@@ -1,18 +1,22 @@
-import { app, BrowserWindow } from 'electron';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import { app, BrowserWindow } from 'electron'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
-let mainWindow: BrowserWindow | null = null;
-let splashWindow: BrowserWindow | null = null;
+let mainWindow: BrowserWindow | null = null
+let splashWindow: BrowserWindow | null = null
 
 function createWindow() {
-  /* ───────── Splash Window ───────── */
+  /* ───────── Command-line hardening ───────── */
+  app.commandLine.appendSwitch('--disable-extensions')
+  app.commandLine.appendSwitch('--disable-features', 'OutOfBlinkCors')
+
+  /* ───────── Splash ───────── */
   splashWindow = new BrowserWindow({
-    width: 480,
-    height: 270,
+    width: 800,
+    height: 600,
     frame: false,
     transparent: true,
     resizable: false,
@@ -20,20 +24,19 @@ function createWindow() {
     show: true,
     backgroundColor: '#00000000',
     webPreferences: {
-      devTools: false
+      devTools: false,
+      sandbox: true
     }
-  });
+  })
 
   const splashPath = app.isPackaged
     ? path.join(__dirname, 'splash.html')
-    : path.join(__dirname, '../renderer/splash.html');
+    : path.join(__dirname, '../renderer/splash.html')
 
-  splashWindow.loadFile(splashPath).catch(console.error);
+  splashWindow.loadFile(splashPath).catch(console.error)
 
   /* ───────── Main Window ───────── */
   mainWindow = new BrowserWindow({
-    width: 1200,
-    height: 800,
     fullscreen: true,
     show: false,
     backgroundColor: '#0b0b0b',
@@ -41,46 +44,61 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, '../preload/preload.mjs'),
       nodeIntegration: false,
-      contextIsolation: true
+      contextIsolation: true,
+      sandbox: true,
+      devTools: false
     }
-  });
+  })
 
   if (process.env.NODE_ENV === 'development') {
-    mainWindow.loadURL('http://localhost:5173').catch(console.error);
+    mainWindow.loadURL('http://localhost:5173').catch(console.error)
   } else {
     mainWindow.loadFile(
       path.join(__dirname, '../renderer/index.html')
-    ).catch(console.error);
+    ).catch(console.error)
   }
 
-  /* ───────── Reveal ONLY when ready ───────── */
   mainWindow.once('ready-to-show', () => {
-    if (splashWindow && !splashWindow.isDestroyed()) {
-      splashWindow.destroy();   // destroy > close
-      splashWindow = null;
-    }
-    mainWindow?.show();
-  });
+    splashWindow?.destroy()
+    splashWindow = null
+    mainWindow?.show()
+  })
 
-  /* ───────── Cleanup ───────── */
   mainWindow.on('closed', () => {
-    mainWindow = null;
-    if (splashWindow && !splashWindow.isDestroyed()) {
-      splashWindow.destroy();
-      splashWindow = null;
+    mainWindow = null
+    splashWindow?.destroy()
+    splashWindow = null
+  })
+
+  /* ───────── Intercept New Windows ───────── */
+  mainWindow.webContents.setWindowOpenHandler(({ url }) => {
+    // Optional: allow certain URLs in your app
+    if (url.startsWith('http')) {
+      return {
+        action: 'allow',
+        overrideBrowserWindowOptions: {
+          width: 1200,     // Set custom width
+          height: 600,    // Set custom height
+          resizable: true,
+          autoHideMenuBar: true,
+          webPreferences: {
+            contextIsolation: true,
+            nodeIntegration: false,
+            devTools: false,
+          }
+        }
+      }
     }
-  });
+    return { action: 'deny' }
+  })
 }
 
-/* ───────── App lifecycle ───────── */
-app.whenReady().then(createWindow);
+app.whenReady().then(createWindow)
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
-});
+  if (process.platform !== 'darwin') app.quit()
+})
 
 app.on('activate', () => {
-  if (BrowserWindow.getAllWindows().length === 0) createWindow();
-});
-
-/* ───────── End of main.ts ───────── */
+  if (BrowserWindow.getAllWindows().length === 0) createWindow()
+})

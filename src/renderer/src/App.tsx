@@ -1,5 +1,5 @@
-import azLogo from "/build-icon/azurlanelogo.png";
-import mk1Logo from "/build-icon/MK1.svg"; // stays in public
+import azLogo from "/img/iconlogo/azurlanelogo.png";
+import mk1Logo from "/img/iconlogo/MK1.svg"; // stays in public
 import "./App.css";
 import "./inter.css";
 
@@ -20,9 +20,50 @@ function App() {
           <p>
             <code>FanBox App</code>
           </p>
-          <p>Welcome to Azur CodeX.</p>
+          <p>Neonic Media / Zero Empire</p>
         </div>
       </section>
+      <footer>
+        <hr />
+        <div className="disclaimer">
+          <p>
+            Trademarks:
+            <a
+              href="http://manjuu.com/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              {/* This "" is for spaces */}
+              Manjuu
+            </a>
+            ,
+            <a
+              href="https://yo-star.com/en-us"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              Yostar
+            </a>
+            , and
+            <a
+              href="https://www.yongshigames.com/#/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {" "}
+              Yongshi
+            </a>
+            .
+          </p>
+          <p>© 2026 Azur Lane CodeX</p>
+          <p>
+            <a href="/privacy">Privacy Policy</a> |{" "}
+            <a href="/terms">Terms of Service</a>
+          </p>
+        </div>
+      </footer>
     </>
   );
 }

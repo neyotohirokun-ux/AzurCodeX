@@ -8,7 +8,7 @@
 
 body {
   background-color: #121212;
-  background-image: url("/azrlnbgi_right.webp");
+  background-image: url("/img/bgi/azrlnbgi_right.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -17,14 +17,20 @@ body {
 }
 
 .introsection {
-  position: relative;
-  right: 80%;
+  position: fixed;
+  left: 12vw;          /* anchor to left edge */
   top: 50%;
+  transform: translateY(-50%);
+  max-width: 40vw;    /* scales with background */
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: clamp(3rem, 8vw, 6rem);
+  padding: clamp(0.5rem, 1.8vw, 1.5rem);
   will-change: filter;
   transition: filter 300ms;
 }
@@ -51,6 +57,7 @@ body {
 }
 
 .card {
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
   padding: 2em;
 }
 

@@ -1,0 +1,194 @@
+{
+    "name": {
+        "name.0": "Universal",
+        "name.1": "Eagle Union",
+        "name.2": "Royal Navy",
+        "name.3": "Sakura Empire",
+        "name.4": "Iron Blood",
+        "name.5": "Dragon Empery",
+        "name.6": "Northern Parliament",
+        "name.7": "Iris Libre",
+        "name.8": "Vichya Dominion",
+        "name.9": "Sardegna Empire",
+        "name.10": "Kingdom of Tulipa",
+        "name.11": "Iris Orthodoxy",
+        "name.97": "META",
+        "name.98": "Siren",
+        "name.99": "Tempesta",
+        "name.100": "Bilibili",
+        "name.101": "Neptunia",
+        "name.102": "Utawarerumono",
+        "name.103": "KIzuna AI",
+        "name.104": "Hololive",
+        "name.105": "Venus Vacation",
+        "name.106": "The Idolmaster",
+        "name.107": "SSSS",
+        "name.108": "Atelier Ryza",
+        "name.109": "Senran Kagura",
+        "name.110": "To LOVE-Ru",
+        "name.111": "BLACK★ROCK SHOOTER",
+        "name.112": "Danmachi",
+        "name.113": "Date A Live"
+    },
+
+    "Prefix": {
+        "prefix.0": "UNI",
+        "prefix.1": "USS",
+        "prefix.2": "HMS",
+        "prefix.3": "IJN",
+        "prefix.4": "KMS/SMS",
+        "prefix.5": "ROCN / PRAN",
+        "prefix.6": "SN",
+        "prefix.7": "FFNF",
+        "prefix.8": "MNF",
+        "prefix.9": "RN",
+        "prefix.10": "HNLMS",
+        "prefix.11": "FN",
+
+        "prefix.99": "MOT",
+        "prefix.100": "BILI",
+        "prefix.101": "HDN"
+    },
+
+    "belligrent": {
+        "belligrent.1": "United States Navy",
+        "belligrent.2": "Royal Navy",
+        "belligrent.3": "Imperial Japanese Navy",
+        "belligrent.4": "Kriegsmarine",
+        "belligrent.5": "Republic of China Navy / People's Liberation Army Navy",
+        "belligrent.6": "Soviet Navy",
+        "belligrent.7": "Free French Naval Forces",
+        "belligrent.8": "Vichy French Navy",
+        "belligrent.9": "Regia Marina",
+        "belligrent.10": "Royal Netherlands Navy",
+        "belligrent.11": "French Navy"
+    },
+
+    "faction": {
+        "faction.0": "Neutral",
+        "faction.1": "Azur Lane",
+        "faction.2": "Crimson Axis",
+        "faction.3": "Unknown"
+    },
+
+    "type": {
+        "type.0": "Major Nation",
+        "type.1": "Siren Nation",
+        "type.2": "Pirate Nation",
+        "type.3": "Collab Nation"
+    },
+
+    "description": {
+        "desc.0.1": "Universal is one of the major nations in Azur Lane that has no association with any of the other nations in the game.",
+        "desc.0.2": "Universal ships (UNIV) are those which have been created by the developers to be \"universal\" - they are strictly neutral. Currently, there are three ships part of this nation: Universal Bulin, Prototype Bulin MKII and Specialized Bulin Custom MKIII, all of which are primarily used for their ability to act as a Limit Breaking material.",
+        "desc.0.3": "\"Universal\" can also refer to gear and equipment that do not belong to any country. However, it should be noted that equipment designated as \"Universal\" in-game may have actually belonged to a specific country historically. One example is the Z Flag, which was used exclusively by the Japanese.",
+
+        "desc.1.1": "The Eagle Union (cn: 白鹰, jp: ユニオン, kr: 이글 유니온) is one of the major nations in Azur Lane who represent the United States Navy.",
+        "desc.1.2": "They are are allied with the Azur Lane, who represent the Allies from World War II, comprising of the Royal Navy and Northern Parliament as part of The Big Three, and the Dragon Empery and Iris Libre.",
+
+        "desc.2.1": "The Royal Navy (cn: 皇家, jp: ロイヤル, kr: 로얄 네이비) is one of the major nations in Azur Lane who represent the British Royal Navy from World War II. This nation includes ships from associated Commonwealth navies, like the HMAS Vampire and HMNZS Achilles.",
+        "desc.2.2": "They are allied with the Azur Lane, who represent the Allies from World War II, comprising of the Eagle Union and Northern Parliament as part of The Big Three, and the Dragon Empery and Iris Libre.",
+
+        "desc.3.1": "The Sakura Empire (cn: 重樱, jp: 重桜, kr: 사쿠라 엠파이어) is one of the major nations in Azur Lane who represent the Japanese Navy from World War II.",
+        "desc.3.2": "They are allied with the Crimson Axis, who represent the Axis powers from World War II, comprising of the Sardegna Empire, Iron Blood, and Vichya Dominion.",
+
+        "desc.4.1": "The Iron Blood (cn: 铁血, jp: 鉄血, kr: 메탈 블러드) is one of the major nations in Azur Lane and represent the Imperial German Navy prior to World War II and the Kriegsmarine during World War II.",
+        "desc.4.2":"They are allied with the Crimson Axis, who represent the Axis powers from World War II, comprising of the Sakura Empire, Sardegna Empire, and Vichya Dominion.",
+
+        "desc.5.1": "The Sardegna Empire (cn: 撒丁帝国, jp: サルデーニア帝国, kr: 사르데냐 제국) is one of the major nations in Azur Lane who represent the Italian Navy from World War II.",
+
+        "desc.6.1": "A nation representing the Soviet Navy, known for its resilience and strategic prowess.",
+
+        "desc.7.1": "A nation representing the Free French Naval Forces, known for its resilience and determination.",
+
+        "desc.8.1": "A nation representing the French Navy under Vichy France, known for its complex history during wartime.",
+
+        "desc.9.1": "The Sardegna Empire (cn: 撒丁帝国, jp: サディア, kr: 사르데냐 엠파이어) is one of the major nations in Azur Lane who represent the Regia Marina during World War II.",
+        "desc.9.2":"They are allied with the Crimson Axis, who represent the Axis powers from World War II, comprising of the Iron Blood, Sakura Empire, and Vichya Dominion.",
+
+        "desc.10.1": "The Kingdom of Tulipa (cn: 郁金王国, jp: チュリッパ王国) is one of the major nations in Azur Lane who represent the Royal Netherlands Navy during World War II.",
+        "desc.10.2": "They are allied with the Azur Lane, who represent the Allies from World War II, comprising of the Royal Navy, Eagle Union, and Northern Parliament as part of The Big Three, as well as the Iris Libre. The Netherlands declared neutrality when the war broke out, but the country was occupied following the bombing of Rotterdam and German occupation persisted in some areas until May 5, 1945, though active resistance mounted.",
+
+        "desc.11.1": "The Iris Orthodoxy (アイリス) is the in-game variant of the French Navy prior to the occupation of France in World War II (WW2), as opposed to the post-occupation split of the French Navy as represented in-game by the Iris Libre and Vichya Dominion. They are not a faction in the true sense, as there are currently no ships in-game belonging to the Iris Orthodoxy; all French ships and French equipment in-game are assigned to either the Iris Libre or Vichya Dominion.",
+        "desc.11.2": "They were one of the major Nations in Azur Lane prior to their schism into the Iris Libre and Vichya Dominion, and were allied with the original Azur Lane prior to the formation of the Crimson Axis and the division of Azur Lane's Nations along WW2 lines.",
+
+        "desc.97.1": "META is a mysterious nation of unknown alliance in Azur Lane whose members are altered counterparts of the original shipgirls in the game. These shipgirls can be added to your Dock by unlocking them through Operation Siren (during their seasonal rotation) or through Cruise missions.",
+
+        "desc.98.1": "The Sirens are the primary antagonists and antagonistic faction in the game, going against the Azur Lane and, on occassion, the Crimson Axis. Members from this faction are encountered as node spawns, in minigames, or as bosses during events. They are also found frequently in Operation Siren, especially in the red danger zones.",
+
+        "desc.99.1": "Tempesta (テンペスタ) is a pirate nation in Azur Lane whose ships and weapons are themed around the Golden Age of Piracy.",
+        "desc.99.2": "Ships in this nation are most likely neutral and do not ally themselves with either the Azur Lane or Crimson Axis.",
+
+        "desc.100.1": "Bilibili is one of the collab nations in Azur Lane based on Bilibili.",
+        "desc.100.2": "Ships in this nation are based on the Bili-tan mascots.",
+
+        "desc.101.1": "Neptunia is one of the collab. nations in Azur Lane based on Hyperdimension Neptunia.",
+        "desc.101.2": "Ships in this nation feature the video game's four main protagonists: Neptune, Noire, Blanc, and Vert, as well as their HDD forms: Purple Heart, Black Heart, White Heart, and Green Heart.",
+
+        "desc.102.1": "Utawarerumono (cn: 传颂之物, jp: うたわれるもの, kr: 칭송받는 자) is one of the Collab Nations in Azur Lane based on the visual novel series Utawarerumono.",
+        "desc.102.2": "Ships in this nation are the actual characters from the game turned into shipgirls.",
+
+        "desc.103.1": "Kizuna AI is one of the collab nations in Azur Lane featuring virtual YouTuber Kizuna AI.",
+        "desc.103.2": "Every ship in this nation features Kizuna AI and different variants of her.",
+
+        "desc.104.1": "Hololive is one of the collab. nations in Azur Lane consisting of virtual YouTubers from Hololive.",
+        "desc.104.2": "Ships from this nation feature different popular virtual YouTubers from Hololive.",
+
+        "desc.105.1": "Venus Vacation is one of the collab nations in Azur Lane consisting of characters from the video game Dead or Alive Xtreme Venus Vacation (DOAXVV).",
+        "desc.105.2": "Ships from this nation feature the characters from the DOAXVV video game. Out of the seven characters included as shipgirls, only Kasumi is a character from the original DOA that debuted in arcades in 1996 and later for PlayStation 1 and Sega Saturn. Marie Rose and Nyotengu debuted in DOA 5 Ultimate, Honoka debuted in DOA 5 Last Round, Tamaki debuted in DOA 6 and Misaki, Nagisa, Monica and Luna all made their debut in DOAXVV.",
+
+        "desc.106.1": "The Idolmaster is one of the collab. nations in Azur Lane based on the video game series The Idolmaster.",
+        "desc.106.2": "Ships from this nation feature the characters from the video game The Idolmaster. By virtue of Azur Anthem, the collaboration nation currently only includes idols from the original 765 Production, from which the franchise originated.",
+
+        "desc.107.1": "SSSS is one of the collab nations in Azur Lane based on the SSSS.Gridman and SSSS.Dynazenon television series, and the Gridman Universe animated film.",
+        "desc.107.2": "Ships from this nation consist of characters from all three mediums. The equipment originate from SSSS.Dynazenon and Gridman Universe.",
+
+        "desc.108.1": "Atelier Ryza is one of the collab nations in Azur Lane based on two video games from the Atelier series franchise: Atelier Ryza 2: Lost Legends & the Secret Fairy and Atelier Ryza 3: Alchemist of the End & the Secret Key.",
+        "desc.108.2": "Klaudia, Reisalin, Patricia, Lila, and Serri come from Atelier Ryza 2, while Kala comes from Atelier Ryza 3. Items and equipment from this nation also come from both video games.",
+
+        "desc.109.1": "Senran Kagura is one of the collab nations in Azur Lane based on Senran Kagura.",
+        "desc.109.2": "Ships in this nation feature: Asuka, Fubuki, Homura, Ikaruga, Yumi, Murasaki and Yūyaki.",
+
+        "desc.110.1": "To LOVE-Ru is one of the collab nations in Azur Lane based on To Love Ru.",
+        "desc.110.2": "Ships in this nation feature: Lala Satalin Deviluke, Nana Astar Deviluke, Momo Belia Deviluke, Golden Darkness, Haruna Sairenji and Yui Kotegawa.",
+
+        "desc.111.1": "BLACK★ROCK SHOOTER is one of the collab nations in Azur Lane based on Black Rock Shooter.",
+        "desc.111.2": "Ships in this nation feature: BLACK★ROCK SHOOTER, DEAD MASTER",
+
+        "desc.112.1": "Atelier Yumia is one of the collab nations in Azur Lane based on a game from the Atelier series franchise: Atelier Yumia: The Alchemist of Memories & the Envisioned Land.",
+
+        "desc.113.1": "Danmachi is one of the collab nations in Azur Lane based on Is It Wrong to Try to Pick Up Girls in a Dungeon?.",
+        "desc.113.2": "Ships in this nation feature: Hestia, Ryu Lion",
+
+        "desc.114.1": "Date A Live is one of the collab nations in Azur Lane based on Date A Live."
+    },
+
+    "trivia": {
+        "trivia.0.1": "Universal ships are often used as Limit Breaking material due to their neutrality.",
+
+        "trivia.1.1": "The bald eagle is the national bird of the United States of America. The shield resembles the coat of arms of the United States, though the actual coat of arms has thirteen stripes (representing the thirteen original states) rather than fifteen.",
+
+        "trivia.2.1": "The name \"Azur Lane\" bears a striking resemblance to the opening verse of the British patriotic song \"Rule, Britannia!\":\n\nWhen Britain first, at heaven's command,\nArose from out the azure main,\nThis was the charter of the land,\nAnd Guardian Angels sang this strain:\n\"Rule, Britannia! rule the waves:\nBritons never will be slaves.\"",
+        "trivia.2.2": "The lion is one of the national symbols of the United Kingdom. The shading on the shield resembles the royal coat of arms. The naval crown, made up of alternating sails and sterns of ships, appears on all ship's badges of the real Royal Navy.",
+
+        "trivia.3.1": "The girls representing IJN ships usually have animal features such as ears, tails, or both. Some of them are also oni (a type of demon in Japanese mythology) or with feathers/wings. The only current exceptions are Zuikaku, Shoukaku, Taihou (these three have avian themed clothing) and Agano.\nCuriously; Agano's sister ships (Noshiro and Sakawa) are both depicted as Oni.",
+        "trivia.3.2": "\"Sakura\" are Japanese cherry blossoms, considered one of the national flowers of Japan, the other being the chrysanthemum of the Imperial Seal of Japan, which was placed on the prow of capital ships. The three comma-like shapes are magatama, arranged in a pattern resembling mitsudomoe.",
+
+        "trivia.4.1": "The Iron Blood in-game depictions tend toward a militarist depiction, in-line with the militarism present in Nazi Germany during World War II. Conversely; the Iron-Blood Research Ships have leaned towards an occult-like depiction.",
+        "trivia.4.2": "The name is most likely a reference to Otto von Bismarck's \"Blood and Iron\" speech:\nNot through speeches and majority decisions will the great questions of the day be decided--that was the great mistake of 1848 and 1849--but by iron and blood.",
+        "trivia.4.3": "The symbol of the Iron Blood resembles both the Iron Cross, a military symbol of Germany, and a sideways Nordic cross, which featured in the war ensigns during both World Wars.",
+
+        "trivia.6.1": "The brown bear is commonly associated with Russia. Red stars are associated with communism.",
+
+        "trivia.7.1": "In French, they were known as the Forces Navales Françaises Libres, or FNFL. Several French ships that managed to escape to British ports before the surrender were subsequently boarded by the British during Operation Catapult, and then turned over to the FFNF. Others were initially aligned with the Vichy regime but switched sides under various circumstances. Still, others were never completed, or never constructed.",
+        "trivia.7.2": "The double-barred cross is the Cross of Lorraine, which was a symbol of Free France. Behind it is a Fleur-de-lis, another symbol of France, patterned after the lily flower, which is part of the iris family.\n- The Cross of Lorraine first appeared as a symbol of French patriotism when Germany first annexed Alsace and also Moselle, the northeastern quarter of Lorraine, in 1871. This continued until the end of World War I in 1918 and resumed when Germany occupied France during World War II from 1940 to 1944. Corvette Captain Thierry d'Argenlieu, who was also a friar and priest in addition to being a French naval officer, suggested the Cross of Lorraine as the symbol of the Free French in answer to the Nazi swastika.\n- A 141-foot (41-meter) Cross of Lorraine is present in Colombey-les-Deux-Eglises in the Grand Est region of France. It is a monument to Charles de Gaulle, the Free French general, leader of the Provisional Government of the French Republic and French President, who was born there.\n- The lily was depicted in France's traditional coat of arms from the High Middle Ages to the French Revolution. In some countries' and provinces' arms, it is still used to represent France, the House of Bourbon or both.",
+
+        "trivia.8.1": "he double-headed axe is a labrys, which was used as a symbol by the Vichy regime.",
+
+        "trivia.9.1": "The shield is the coat of arms of Savoy, which was placed on the flag of the Kingdom of Sardinia in 1848, and then the flag of the Kingdom of Italy upon its formation in 1861. The laurel wreath was a symbol of Roman triumph.",
+        "trivia.9.2": "Sardegna is the Italian name for Sardinia.",
+
+        "trivia.10.1": "The tulip is a symbol of the Netherlands. Some Dutch tulips – especially their bulbs – are attributed as causing \"tulip mania\" from 1634 to 1637 when their contract prices skyrocketed, causing the first recorded speculative bubble or asset bubble.",
+        "trivia.10.2": "Windmills in the Netherlands were built to pump water out of the lowlands and back into the rivers beyond dikes (26% of the Netherlands is below sea level)."
+    }
+}
