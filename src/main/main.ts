@@ -5,6 +5,8 @@ import { fileURLToPath } from 'url'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
+const iconPath = path.join(__dirname, '../renderer/img/iconlogo/mk1-526x2.ico')
+
 let mainWindow: BrowserWindow | null = null
 let splashWindow: BrowserWindow | null = null
 
@@ -15,13 +17,15 @@ function createWindow() {
 
   /* ───────── Splash ───────── */
   splashWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 600,
+    height: 400,
     frame: false,
     transparent: true,
+    backgroundMaterial: 'mica',
     resizable: false,
     alwaysOnTop: true,
     show: true,
+    icon: iconPath,
     backgroundColor: '#00000000',
     webPreferences: {
       devTools: false,
@@ -39,14 +43,16 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     fullscreen: true,
     show: false,
+    transparent: true,
+    backgroundMaterial: 'mica',
     backgroundColor: '#0b0b0b',
     autoHideMenuBar: true,
+    icon: iconPath,
     webPreferences: {
       preload: path.join(__dirname, '../preload/preload.mjs'),
       nodeIntegration: false,
       contextIsolation: true,
       sandbox: true,
-      devTools: false
     }
   })
 
@@ -77,10 +83,11 @@ function createWindow() {
       return {
         action: 'allow',
         overrideBrowserWindowOptions: {
-          width: 1200,     // Set custom width
+          width: 1000,     // Set custom width
           height: 600,    // Set custom height
           resizable: true,
           autoHideMenuBar: true,
+          icon: iconPath,
           webPreferences: {
             contextIsolation: true,
             nodeIntegration: false,

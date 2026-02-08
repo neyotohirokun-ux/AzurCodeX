@@ -1,0 +1,19 @@
+/* src/pages/NationTypes.css */
+
+/* Example: customize by type names (adjust to your types) */
+
+.type-warrior {
+  background: #ffe0e0; /* light red */
+}
+
+.type-trader {
+  background: #e0f7ff; /* light blue */
+}
+
+.type-peaceful {
+  background: #e0ffe0; /* light green */
+}
+
+.type-unknown {
+  background: #f5f5f5; /* gray */
+}

@@ -7,19 +7,22 @@ const __dirname = import.meta.dirname;
 const require2 = __cjs_mod__.createRequire(import.meta.url);
 const __filename$1 = fileURLToPath(import.meta.url);
 const __dirname$1 = path.dirname(__filename$1);
+const iconPath = path.join(__dirname$1, "../renderer/img/iconlogo/mk1-526x2.ico");
 let mainWindow = null;
 let splashWindow = null;
 function createWindow() {
   app.commandLine.appendSwitch("--disable-extensions");
   app.commandLine.appendSwitch("--disable-features", "OutOfBlinkCors");
   splashWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 600,
+    height: 400,
     frame: false,
     transparent: true,
+    backgroundMaterial: "mica",
     resizable: false,
     alwaysOnTop: true,
     show: true,
+    icon: iconPath,
     backgroundColor: "#00000000",
     webPreferences: {
       devTools: false,
@@ -31,14 +34,16 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     fullscreen: true,
     show: false,
+    transparent: true,
+    backgroundMaterial: "mica",
     backgroundColor: "#0b0b0b",
     autoHideMenuBar: true,
+    icon: iconPath,
     webPreferences: {
       preload: path.join(__dirname$1, "../preload/preload.mjs"),
       nodeIntegration: false,
       contextIsolation: true,
-      sandbox: true,
-      devTools: false
+      sandbox: true
     }
   });
   if (process.env.NODE_ENV === "development") {
@@ -63,12 +68,13 @@ function createWindow() {
       return {
         action: "allow",
         overrideBrowserWindowOptions: {
-          width: 1200,
+          width: 1e3,
           // Set custom width
           height: 600,
           // Set custom height
           resizable: true,
           autoHideMenuBar: true,
+          icon: iconPath,
           webPreferences: {
             contextIsolation: true,
             nodeIntegration: false,
