@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNation } from "../hooks/useNations";
-import { Link } from "react-router-dom";
 import "./Nations.css";
-import "./NationTypes.css";
+import { Footer } from "../components/footer";
+import { Navigation } from "../components/navigation";
 
 export const Nations: React.FC = () => {
   const { nations, getNation } = useNation("en");
@@ -27,56 +27,56 @@ export const Nations: React.FC = () => {
 
   return (
     <div className="nations-container">
-      <div className="controls">
-        <button>
-          <Link to="/" className="btn-link">
-            Return
-          </Link>
-        </button>
+      {/*Navigation is here for better user experience, but it can be removed if not needed. */}
+      <Navigation />
 
-        <label className="toggle-switch">
-          <input
-            type="checkbox"
-            checked={groupByFaction}
-            onChange={() => setGroupByFaction(!groupByFaction)}
-          />
-          <span className="slider"></span>
-          <span className="switch-label">
+      <div className="sub-container">
+        <div className="controls">
+          <p>Toggle by:</p>
+          <label className="toggle-switch">
+            <input
+              type="checkbox"
+              checked={groupByFaction}
+              onChange={() => setGroupByFaction(!groupByFaction)}
+            />
+            :<span className="slider"></span>
+          </label>
+          <div className="switch-label">
             {groupByFaction ? "Faction" : "Type"}
-          </span>
-        </label>
-      </div>
-      <h1 className="page-title">Nations</h1>
-
-      {Object.keys(nationsByGroup).map((group) => (
-        <div
-          key={group}
-          className={`nation-type-container type-${group.toLowerCase()}`}
-        >
-          <h2 className="type-title">{group}</h2>
-          <div className="type-nations">
-            {nationsByGroup[group].map((nation) => (
-              <div key={nation.id} className="nation-card">
-                {nation.logo && (
-                  <img
-                    src={nation.logo}
-                    alt={nation.name}
-                    className="nation-logo"
-                  />
-                )}
-                <h3>{nation.name.toUpperCase()}</h3>
-                <p className="nation-code">{nation.code}</p>
-                <p className="nation-prefix">{nation.nationality.prefix}</p>
-                <p className="nation-faction">
-                  {groupByFaction
-                    ? nation.nationality.type
-                    : nation.nationality.faction}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
-      ))}
+
+        {Object.keys(nationsByGroup).map((group) => (
+          <div
+            key={group}
+            className={`nation-type-container type-${group.toLowerCase()}`}
+          >
+            <h2 className="type-title">{group}</h2>
+            <div className="type-nations">
+              {nationsByGroup[group].map((nation) => (
+                <div key={nation.id} className="nation-card">
+                  {nation.logo && (
+                    <img
+                      src={`${import.meta.env.BASE_URL}${nation.logo}`}
+                      alt={nation.name}
+                      className="nation-logo"
+                    />
+                  )}
+                  <h3>{nation.name.toUpperCase()}</h3>
+                  <p className="nation-code">{nation.code}</p>
+                  <p className="nation-prefix">{nation.nationality.prefix}</p>
+                  <p className="nation-faction">
+                    {groupByFaction
+                      ? nation.nationality.type
+                      : nation.nationality.faction}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <Footer />
     </div>
   );
 };

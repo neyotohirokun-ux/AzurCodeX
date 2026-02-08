@@ -34,7 +34,7 @@ function createWindow() {
   })
 
   const splashPath = app.isPackaged
-    ? path.join(__dirname, 'splash.html')
+    ? path.join(process.resourcesPath, 'app.asar', 'out/renderer/splash.html')
     : path.join(__dirname, '../renderer/splash.html')
 
   splashWindow.loadFile(splashPath).catch(console.error)

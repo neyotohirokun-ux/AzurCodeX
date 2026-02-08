@@ -29,7 +29,7 @@ function createWindow() {
       sandbox: true
     }
   });
-  const splashPath = app.isPackaged ? path.join(__dirname$1, "splash.html") : path.join(__dirname$1, "../renderer/splash.html");
+  const splashPath = app.isPackaged ? path.join(process.resourcesPath, "app.asar", "out/renderer/splash.html") : path.join(__dirname$1, "../renderer/splash.html");
   splashWindow.loadFile(splashPath).catch(console.error);
   mainWindow = new BrowserWindow({
     fullscreen: true,

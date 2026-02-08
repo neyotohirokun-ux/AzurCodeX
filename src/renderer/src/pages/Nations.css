@@ -1,18 +1,23 @@
 /* src/pages/Nations.css */
 .nations-container {
+  background-image: url("/img/bgi/theraw.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+.sub-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  background-image: url("/img/bgi/theraw.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
 }
 
 .nation-type-container {
-  padding: 1.5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-inline: 1rem;
   margin-inline: 5vw;
   border-radius: 12px;
   display: flex;
@@ -38,7 +43,7 @@
   content: "";
   flex: 1;
   border-bottom: 1px solid #fff; /* line color */
-  margin: 0 0.5em; /* spacing around text */
+  margin: 1.5rem 0.5em 0; /* spacing around text */
 }
 
 
@@ -101,8 +106,12 @@
 .controls {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 20%;
   gap: 1rem;
   margin-bottom: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
 }
 
 .toggle-switch {
@@ -151,4 +160,12 @@ input:checked + .slider::before {
   margin-left: 0.5rem;
   font-size: 0.9rem;
   color: #fff;
+}
+
+.footer-content {
+  text-align: center;
+  padding: 1rem;
+  color: #888;
+  font-size: 0.9rem;
+  background-color: #121212;
 }
