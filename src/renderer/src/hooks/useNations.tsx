@@ -1,3 +1,4 @@
+// hooks/useNation.tsx
 import { useState, useEffect } from "react";
 import nationsData from "../data-nation/nations.json";
 
@@ -10,7 +11,7 @@ export interface NationEntry {
   name: Partial<Record<Language, string | null>>;
   nationality: {
     prefix?: string | null;
-    belligrent?: string | null;
+    belligerent?: string | null;
     faction?: string | null;
     type?: string | null;
   };
@@ -19,7 +20,6 @@ export interface NationEntry {
   [extraField: string]: unknown;
 }
 
-// Lookup by object key (string)
 export const useNation = (lang: Language = "en") => {
   const [nations, setNations] = useState<Record<string, NationEntry>>({});
 
@@ -32,6 +32,7 @@ export const useNation = (lang: Language = "en") => {
     if (!nation) return null;
 
     return {
+      objectKey, // 🔥 keep the key
       ...nation,
       name: nation.name[lang] || nation.name.en || "",
     };

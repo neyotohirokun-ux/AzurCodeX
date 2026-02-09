@@ -1,0 +1,49 @@
+.shipdata-container {
+  padding: 2rem;
+  color: #e0e0e0;
+  background-image: url("/img/bgi/theraw.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+.shipdata-container h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.shipdata-container h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #c0c0c0;
+}
+
+.shipdata-table {
+  width: 60%;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+}
+
+.shipdata-table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shipdata-skins {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.ship-skin-card {
+  min-width: 120px;
+  text-align: center;
+}
+
+.ship-skin-img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}

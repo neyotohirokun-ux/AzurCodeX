@@ -17,7 +17,7 @@ export const Home = () => {
         </div>
         <h1>Azur Lane CodeX</h1>
         <button>
-          <Link to="/nation/0" className="btn-link">
+          <Link to="/nationlist/0" className="btn-link">
             Continue
           </Link>
         </button>

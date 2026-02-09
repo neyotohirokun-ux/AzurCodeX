@@ -12,7 +12,7 @@ export function Navigation() {
         <NavLink to="*" className="nav-link">
           Home
         </NavLink>
-        <NavLink to="/nation/0" className="nav-link">
+        <NavLink to="/nationlist/0" className="nav-link">
           Nations
         </NavLink>
       </div>
