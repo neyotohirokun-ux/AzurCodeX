@@ -1,6 +1,5 @@
+/* Main Container */
 .shipdata-container {
-  padding: 2rem;
-  color: #e0e0e0;
   background-image: url("/img/bgi/theraw.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -8,6 +7,7 @@
   background-attachment: fixed;
 }
 
+/* Headers */
 .shipdata-container h1 {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -16,34 +16,155 @@
 .shipdata-container h2 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #c0c0c0;
 }
 
-.shipdata-table {
-  width: 60%;
-  margin-bottom: 2rem;
-  border-collapse: collapse;
+/* Content Container */
+.shipdata-sub-container {
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.shipdata-table td {
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* Header Section */
+.shipdata-icon-and-name {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shipdata-icon-img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Main Content Area */
+.shipdata-topcenter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-block: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Info Container */
+.shipdata-info {
+  flex: 1;
+  min-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: #e0e0e0;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+/* Meta Row (3-column layout) */
+.shipdata-meta-row {
+  display: flex;
+  align-items: stretch;
+  border-radius: 8px;
+  width: 2200px;
+}
+
+/* Shipyard Image */
+.shipdata-meta-img {
+  display: flex;
+  justify-content: center;
+}
+
+.shipdata-shipyard-img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  border-inline: 2px solid grey;
+}
+
+/* Skin List */
+.shipdata-meta-skinlist {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-inline: 2px solid grey;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .shipdata-skins {
   display: flex;
-  gap: 1rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
-}
-
-.ship-skin-card {
-  min-width: 120px;
-  text-align: center;
-}
-
-.ship-skin-img {
+  flex-direction: column;
+  gap: 0.5rem;
   width: 100%;
-  object-fit: contain;
+}
+
+.shipdata-skin-card {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 50px;
+}
+
+.shipdata-skin-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover; /* Changed from contain for better cropping */
   border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.shipdata-skin-img.active {
+  border-color: #2196f3;
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+}
+
+/* Additional Info */
+.shipdata-meta-addinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Stats Section */
+.shipdata-stats-section {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* ===== TABLES ===== */
+.shipdata-table {
+  width: 100%; /* Full width tables */
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.shipdata-table thead {
+  background: rgba(255, 255, 255, 0.05)
+}
+
+.shipdata-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.shipdata-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shipdata-table tr:last-child td {
+  border-bottom: none;
 }

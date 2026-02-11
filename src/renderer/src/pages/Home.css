@@ -1,12 +1,15 @@
-body {
+.landing-page {
+  min-height: 100vh;   /* force full screen height */
+  width: 100%;
   background-color: #121212;
   background-image: url("/img/bgi/azrlnbgi_right.webp");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-position: center;
+  background-position: center right; /* optional improvement */
   background-size: contain;
   color: #ffffff;
 }
+
 
 .introsection {
   position: fixed;

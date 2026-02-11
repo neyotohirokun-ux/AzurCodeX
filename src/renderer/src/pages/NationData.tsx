@@ -18,49 +18,57 @@ export const NationData = () => {
   return (
     <div className="nation-data-page">
       <Navigation />
-
       <div className="nation-data-container">
-        {nation.logo && (
-          <img
-            src={`${import.meta.env.BASE_URL}${nation.logo}`}
-            alt={nation.name}
-            className="nation-data-logo"
-          />
-        )}
+        <h1>{nation.name.toUpperCase()}</h1>
 
-        <section>
-          <h1>{nation.name}</h1>
-          <p className="nation-code">{nation.code}</p>
-          <h2>Nationality</h2>
-          <table className="nation-table">
-            <tr>
-              <td>Prefix:</td>
-              <td>{nation.nationality.prefix}</td>
-            </tr>
-            <tr>
-              <td>Faction:</td>
-              <td>{nation.nationality.faction}</td>
-            </tr>
-            <tr>
-              <td>Type:</td>
-              <td>{nation.nationality.type}</td>
-            </tr>
-            <tr>
-              <td>Belligerent:</td>
-              <td>{nation.nationality.belligerent}</td>
-            </tr>
-          </table>
-        </section>
-
-        {nation.desc && (
-          <section>
-            <h2>Description</h2>
-            {Object.entries(nation.desc).map(([k, v]) => (
-              <p key={k}>{v}</p>
-            ))}
+        <div className="nation-data-content">
+          <section className="nation-desc-section">
+            {nation.desc && (
+              <section>
+                <h2>Description</h2>
+                {Object.entries(nation.desc).map(([k, v]) => (
+                  <p key={k}>{v}</p>
+                ))}
+              </section>
+            )}
           </section>
-        )}
 
+          <section className="nation-data-section">
+            {nation.logo && (
+              <img
+                src={`${import.meta.env.BASE_URL}${nation.logo}`}
+                alt={nation.name}
+                className="nation-data-logo"
+              />
+            )}
+            <div className="nation-minor-info">
+              <p className="nation-code">Name: {nation.name}</p>
+              <p className="nation-code">Code: {nation.code}</p>
+              <p className="nation-code">Nation Id: {nation.id}</p>
+            </div>
+            <h2>Nationality</h2>
+            <table className="nation-table">
+              <tr>
+                <td>Prefix:</td>
+                <td>{nation.nationality.prefix}</td>
+              </tr>
+              <tr>
+                <td>Faction:</td>
+                <td>{nation.nationality.faction}</td>
+              </tr>
+              <tr>
+                <td>Type:</td>
+                <td>{nation.nationality.type}</td>
+              </tr>
+              <tr>
+                <td>Belligerent:</td>
+                <td>{nation.nationality.belligerent}</td>
+              </tr>
+            </table>
+          </section>
+        </div>
+
+        <h2>Shipyard</h2>
         <ShipList nationKey={objectNationKey} />
 
         {nation.trivia && (

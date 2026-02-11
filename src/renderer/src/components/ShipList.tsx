@@ -14,11 +14,10 @@ export const ShipList: React.FC<ShipListProps> = ({ nationKey }) => {
 
   if (loading) return <p>Loading ships...</p>;
   if (error) return <p>{error}</p>;
-  if (gids.length === 0) return <p>No ships available.</p>;
+  if (gids.length === 0) return <p>No ships at the port.</p>;
 
   return (
     <div className="ship-list-container">
-      <h2>Shipyard</h2>
       {gids.map((gid) => (
         <ShipCard key={gid} nationKey={nationKey} gid={gid} />
       ))}

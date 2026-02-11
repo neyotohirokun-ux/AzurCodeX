@@ -1,6 +1,6 @@
 // hooks/useNation.tsx
 import { useState, useEffect } from "react";
-import nationsData from "../data-nation/nations.json";
+import nationsData from "../data-meta/nations.json";
 
 export type Language = "en" | "cn" | "jp" | "kr";
 

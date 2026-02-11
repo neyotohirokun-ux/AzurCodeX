@@ -5,6 +5,8 @@
   background-repeat: no-repeat;
   background-position: center bottom;
   background-attachment: fixed;
+  min-height: 100vh;   /* force full screen height */
+  width: 100%;
 }
 
 .sub-container {
@@ -73,10 +75,10 @@
 
 .nation-card {
   background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-inline: 2px solid rgba(255, 255, 255, 0.8);
   text-align: center;
   border-radius: 10px;
-  padding: 1rem;
+  padding: rem;
   min-width: 220px; /* ensure consistent width for horizontal layout */
   flex: 0 0 auto; /* prevent shrinking */
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -87,13 +89,14 @@
 .nation-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  border-inline: 2px solid #09a9fb;
 }
 
 .nation-logo {
   width: 100%;
   height: 120px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .nation-code, .nation-prefix, .nation-faction {

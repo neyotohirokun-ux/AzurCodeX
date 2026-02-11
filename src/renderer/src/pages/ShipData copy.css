@@ -1,0 +1,230 @@
+/* ===== MAIN CONTAINER ===== */
+.shipdata-container {
+  background-image: url("/img/bgi/theraw.webp");
+  background-size: cover; /* Changed from contain for better coverage */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* ===== TYPOGRAPHY ===== */
+.shipdata-container h1 {
+  font-size: 2.5rem; /* Increased for better hierarchy */
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.shipdata-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.shipdata-container h3 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 1rem;
+  color: #ffffff;
+}
+
+/* ===== CONTENT CONTAINER ===== */
+.shipdata-sub-container {
+  color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* Increased spacing */
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1400px; /* Slightly wider */
+  background-color: rgba(0, 0, 0, 0.85); /* Darker overlay for better contrast */
+  border-radius: 12px;
+  backdrop-filter: blur(8px); /* Frosted glass effect */
+}
+
+/* ===== HEADER SECTION ===== */
+.shipdata-icon-and-name {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap */
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border-left: 4px solid #2196f3; /* Accent border */
+}
+
+.shipdata-icon-img {
+  width: 80px; /* Larger icon */
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* ===== MAIN CONTENT AREA ===== */
+.shipdata-topcenter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  padding: 2rem 0;
+}
+
+/* ===== META ROW LAYOUT ===== */
+.shipdata-meta-row {
+  display: flex;
+  align-items: stretch;
+  border-radius: 12px;
+  width: 100%; /* Changed from fixed width to responsive */
+  max-width: 100%;
+  gap: 2rem; /* Added gap between columns */
+  flex-wrap: wrap; /* Responsive wrapping */
+}
+
+/* ===== INFORMATION COLUMNS ===== */
+.shipdata-meta-addinfo {
+  flex: 1;
+  min-width: 300px; /* Responsive minimum */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.shipdata-meta-img {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.shipdata-shipyard-img {
+  width: 100%;
+  max-width: 400px; /* Responsive max width */
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.shipdata-meta-skinlist {
+  flex: 1;
+  min-width: 300px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+}
+
+/* ===== SKIN LIST ===== */
+.shipdata-skins {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.shipdata-skin-card {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.shipdata-skin-card:hover {
+  transform: translateY(-4px);
+}
+
+.shipdata-skin-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover; /* Changed from contain for better cropping */
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.shipdata-skin-img.active {
+  border-color: #2196f3;
+  background: rgba(33, 150, 243, 0.2);
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.4);
+}
+
+/* ===== TABLES ===== */
+.shipdata-table {
+  width: 100%; /* Full width tables */
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.shipdata-table thead {
+  background: rgba(33, 150, 243, 0.2);
+}
+
+.shipdata-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.shipdata-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shipdata-table tr:last-child td {
+  border-bottom: none;
+}
+
+.shipdata-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== STATS SECTION ===== */
+.shipdata-stats-section {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+  .shipdata-meta-row {
+    flex-direction: column; /* Stack columns on mobile */
+  }
+  
+  .shipdata-sub-container {
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+  
+  .shipdata-icon-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shipdata-container h1 {
+    font-size: 2rem;
+  }
+  
+  .shipdata-container h2 {
+    font-size: 1.25rem;
+  }
+  
+  .shipdata-skins {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+  
+  .shipdata-skin-img {
+    width: 60px;
+    height: 60px;
+  }
+}
