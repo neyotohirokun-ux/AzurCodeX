@@ -10,7 +10,7 @@ export const useShipList = (nationKey: string) => {
 
     setLoading(true);
 
-    fetch(`/data-ship/${nationKey}/ship-index.json`) // 🔹 fetch each nation's ship-index.json
+    fetch(`${import.meta.env.BASE_URL}data-ship/${nationKey}/ship-index.json`) // 🔹 fetch each nation's ship-index.json
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load ship index");
         return res.json();

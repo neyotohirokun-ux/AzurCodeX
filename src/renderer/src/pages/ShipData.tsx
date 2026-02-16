@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useShipData } from "../hooks/useShipData";
 import { useShipSkin } from "../hooks/useShipSkin";
@@ -10,6 +10,10 @@ import { Navigation } from "../components/navigation";
 import { Footer } from "../components/footer";
 
 export const ShipData: React.FC = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { nationKey, gid } = useParams<{ nationKey: string; gid: string }>();
   const { data, loading, error } = useShipData(nationKey!, Number(gid));
   const { skins } = useShipSkin(nationKey!, Number(gid));
@@ -49,7 +53,7 @@ export const ShipData: React.FC = () => {
             <div className="shipdata-meta-row">
               {/* Additional Info */}
               <div className="shipdata-meta-addinfo">
-                <table className="shipdata-table">
+                <table className="shipdata-toptable">
                   <thead>
                     <tr>
                       <td>
@@ -93,7 +97,11 @@ export const ShipData: React.FC = () => {
                     </tr>
                     <tr>
                       <td>Obtain:</td>
-                      <td>{data.obtain}</td>
+                      <td>
+                        {Array.isArray(data.obtain)
+                          ? data.obtain.join(", ")
+                          : data.obtain}
+                      </td>
                     </tr>
                   </tbody>
                 </table>

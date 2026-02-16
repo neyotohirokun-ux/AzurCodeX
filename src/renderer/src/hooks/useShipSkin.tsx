@@ -11,7 +11,7 @@ export const useShipSkin = (nationKey: string, gid: number | string) => {
 
     setLoading(true);
 
-    fetch(`/data-ship/${nationKey}/${gid}/skin.json`)
+    fetch(`${import.meta.env.BASE_URL}data-ship/${nationKey}/${gid}/skin.json`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to load ship skins");
         return res.json();

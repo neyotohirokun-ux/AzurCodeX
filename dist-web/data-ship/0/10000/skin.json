@@ -1,0 +1,48 @@
+{
+  "skins": [
+    {
+      "id": 100000,
+      "gid": 10000,
+      "name": "Universal Bulin",
+      "type": "Default",
+      "desc": "900512",
+      "tag": [],
+      "illustrator": 1,
+      "illustrator2": -1,
+      "voice_actor": 72,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": null,
+      "background2": null,
+      "painting": "img/skin/10000/100000/painting.png",
+      "painting_n": "img/skin/10000/100000/painting_n.png",
+      "banner": "img/skin/10000/100000/banner.png",
+      "chibi": "img/skin/10000/100000/chibi.png",
+      "icon": "img/skin/10000/100000/icon.png",
+      "qicon": "img/skin/10000/100000/qicon.png",
+      "shipyard": "img/skin/10000/100000/shipyard.png"
+    },
+    {
+      "id": 100001,
+      "gid": 10000,
+      "name": "Universal Enhanced Rigging (Experimental) +α",
+      "type": "Others",
+      "desc": "Buli? Did I just get an upgrade buli? Now, I can fight too buli!",
+      "tag": [],
+      "illustrator": 1,
+      "illustrator2": -1,
+      "voice_actor": 72,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": null,
+      "background2": null,
+      "painting": "img/skin/10000/100001/painting.png",
+      "painting_n": "img/skin/10000/100001/painting_n.png",
+      "banner": "img/skin/10000/100001/banner.png",
+      "chibi": "img/skin/10000/100001/chibi.png",
+      "icon": "img/skin/10000/100001/icon.png",
+      "qicon": "img/skin/10000/100001/qicon.png",
+      "shipyard": "img/skin/10000/100001/shipyard.png"
+    }
+  ]
+}
