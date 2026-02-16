@@ -1,4 +1,3 @@
-// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -8,8 +7,10 @@ export default defineConfig(({ mode }) => {
 
   return {
     root: path.resolve(__dirname, "src/renderer"),
-    base: isElectron ? "./" : "/AzurCodeX/",
+    base: isElectron ? "./" : "/AzurCodeX/", // ⚡ Must match repo name exactly
     plugins: [react()],
+    build: {
+      outDir: path.resolve(__dirname, "dist-web"),
+    },
   };
 });
-
