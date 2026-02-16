@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
 
   return {
     root: path.resolve(__dirname, "src/renderer"),
-    base: isElectron ? "./" : "/your-repo-name/",
+    base: isElectron ? "./" : "/AzurCodeX/",
     plugins: [react()],
   };
 });
