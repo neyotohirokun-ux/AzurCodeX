@@ -20,7 +20,10 @@
       "chibi": "img/skin/10000/100000/chibi.png",
       "icon": "img/skin/10000/100000/icon.png",
       "qicon": "img/skin/10000/100000/qicon.png",
-      "shipyard": "img/skin/10000/100000/shipyard.png"
+      "shipyard": "img/skin/10000/100000/shipyard.png",
+      "spine_chibi": null,
+      "spine": null,
+      "live2d": null
     },
     {
       "id": 100001,
@@ -42,7 +45,10 @@
       "chibi": "img/skin/10000/100001/chibi.png",
       "icon": "img/skin/10000/100001/icon.png",
       "qicon": "img/skin/10000/100001/qicon.png",
-      "shipyard": "img/skin/10000/100001/shipyard.png"
+      "shipyard": "img/skin/10000/100001/shipyard.png",
+      "spine_chibi": null,
+      "spine": null,
+      "live2d": null
     }
   ]
 }

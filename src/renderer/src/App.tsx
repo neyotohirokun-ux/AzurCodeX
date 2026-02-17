@@ -5,6 +5,7 @@ import { NationList } from "./pages/NationList";
 import { Home } from "./pages/Home";
 import { NationData } from "./pages/NationData";
 import { ShipData } from "./pages/ShipData";
+import { ShipSkin } from "./pages/ShipSkin";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Route path="/nationlist/:objectKey" element={<NationList />} />
       <Route path="/nationdata/:objectNationKey" element={<NationData />} />
       <Route path="/shipdata/:nationKey/:gid" element={<ShipData />} />
+      <Route path="/shipskin/:nationKey/:gid" element={<ShipSkin />} />
     </Routes>
   );
 }

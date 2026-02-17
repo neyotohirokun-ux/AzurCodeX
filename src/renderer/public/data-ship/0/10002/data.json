@@ -1,11 +1,11 @@
 {
+  "id": 3,
   "gid": 10002,
   "cid": 0,
   "sid": [
     100021
   ],
   "name": "Specialized Bulin Custom MKIII",
-  "normalizedName": "specialized_bulin_custom_mkiii",
   "codename": "UNIV Ultra Bulin MKIII",
   "class": "Bulin Class",
   "nationality": 0,

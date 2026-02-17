@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useShipData } from "../hooks/useShipData";
 import { useShipSkin } from "../hooks/useShipSkin";
 import { useRarity } from "../hooks/useRarity";
@@ -57,9 +57,13 @@ export const ShipData: React.FC = () => {
                   <thead>
                     <tr>
                       <td>
-                        <strong>Global Id:</strong>
+                        <strong>Global ID:</strong>
                       </td>
                       <td>{data.gid}</td>
+                    </tr>
+                    <tr>
+                      <td>ID:</td>
+                      <td>{data.id}</td>
                     </tr>
                   </thead>
                   <tbody>
@@ -120,7 +124,10 @@ export const ShipData: React.FC = () => {
 
               {/* Skin List */}
               <div className="shipdata-meta-skinlist">
-                <h3>Skins</h3>
+                <Link to={`/shipskin/${nationKey}/${gid}`}>
+                  <h3 className="shipdata-skin-link">View Skins</h3>
+                </Link>
+
                 <div className="shipdata-skins">
                   {skins?.skins.map((skin, index) => (
                     <div key={skin.id} className="shipdata-skin-card">

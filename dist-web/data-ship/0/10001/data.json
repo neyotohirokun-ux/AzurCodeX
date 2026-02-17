@@ -1,11 +1,11 @@
 {
+  "id": 2,
   "gid": 10001,
   "cid": 0,
   "sid": [
     100011
   ],
   "name": "Prototype Bulin MKII",
-  "normalizedName": "prototype_bulin_mkii",
   "codename": "UNIV Trial Bulin MKII",
   "class": "Bulin Class",
   "nationality": 0,

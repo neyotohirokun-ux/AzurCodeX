@@ -13,6 +13,7 @@ export interface ShipBaseStats {
 }
 
 export interface ShipData {
+  id: number;
   gid: number;
   cid: number;
   name: string;
@@ -44,6 +45,9 @@ export interface ShipSkin {
   icon: string;
   qicon: string;
   shipyard: string;
+  spine_chibi: string;
+  spine: string;
+  live2d: string;
 }
 
 export interface ShipSkinData {

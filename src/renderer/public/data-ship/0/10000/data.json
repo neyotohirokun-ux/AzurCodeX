@@ -1,11 +1,11 @@
 {
+  "id": 1,
   "gid": 10000,
   "cid": 0,
   "sid": [
     100001
   ],
   "name": "Universal Bulin",
-  "normalizedName": "universal_bulin",
   "codename": "UNIV Universal Bulin",
   "class": "Bulin Class",
   "nationality": 0,

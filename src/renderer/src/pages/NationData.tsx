@@ -48,22 +48,24 @@ export const NationData = () => {
             </div>
             <h2>Nationality</h2>
             <table className="nation-table">
-              <tr>
-                <td>Prefix:</td>
-                <td>{nation.nationality.prefix}</td>
-              </tr>
-              <tr>
-                <td>Faction:</td>
-                <td>{nation.nationality.faction}</td>
-              </tr>
-              <tr>
-                <td>Type:</td>
-                <td>{nation.nationality.type}</td>
-              </tr>
-              <tr>
-                <td>Belligerent:</td>
-                <td>{nation.nationality.belligerent}</td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td>Prefix:</td>
+                  <td>{nation.nationality.prefix}</td>
+                </tr>
+                <tr>
+                  <td>Faction:</td>
+                  <td>{nation.nationality.faction}</td>
+                </tr>
+                <tr>
+                  <td>Type:</td>
+                  <td>{nation.nationality.type}</td>
+                </tr>
+                <tr>
+                  <td>Belligerent:</td>
+                  <td>{nation.nationality.belligerent}</td>
+                </tr>
+              </tbody>
             </table>
           </section>
         </div>
