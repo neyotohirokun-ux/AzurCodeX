@@ -31,6 +31,14 @@
     "icon": "img/skill/2000.png",
     "max_level": 10
   },
+  "608": {
+    "id": 608,
+    "type": 1,
+    "name": " (Retrofit) Quick Reload",
+    "desc": "Every 20s: 30.0% (60.0%) chance to increase this ship's RLD by 20.0% (40.0%) for 10s.",
+    "icon": "img/skill/2000.png",
+    "max_level": 10
+  },
   "1001": {
     "id": 1001,
     "type": 3,
