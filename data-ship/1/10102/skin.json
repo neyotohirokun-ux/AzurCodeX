@@ -1,0 +1,80 @@
+{
+  "skins": [ 
+      {
+      "id": 101020,
+      "gid": 10102,
+      "name": "Dewey",
+      "type": "Default",
+      "desc": "Farragut-class destroyer – Dewey, Hull Number DD-349.",
+      "tag": [],
+      "illustrator": -1,
+      "illustrator2": -1,
+      "voice_actor": 178,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": null,
+      "background2": null,
+      "painting": "img/skin/10102/101020/painting.png",
+      "painting_n": null,
+      "banner": "img/skin/10102/101020/banner.png",
+      "chibi": "img/skin/10102/101020/chibi.png",
+      "icon": "img/skin/10102/101020/icon.png",
+      "qicon": "img/skin/10102/101020/qicon.png",
+      "shipyard": "img/skin/10102/101020/shipyard.png"
+    },
+    {
+      "id": 101021,
+      "gid": 10102,
+      "name": "Summer Longing",
+      "type": "Swimsuits",
+      "desc": "Saratoga went over there, and Lexington is... Oh, Commander, good morning! Are you here to play with us, or were you just out for some fresh air...?",
+      "tag": [
+        "bg"
+      ],
+      "illustrator": -1,
+      "illustrator2": -1,
+      "voice_actor": 178,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": "img/back/10102ground/106.png",
+      "background2": null,
+      "painting": "img/skin/10102/101021/painting.png",
+      "painting_n": null,
+      "banner": "img/skin/10102/101021/banner.png",
+      "chibi": "img/skin/10102/101021/chibi.png",
+      "icon": "img/skin/10102/101021/icon.png",
+      "qicon": "img/skin/10102/101021/qicon.png",
+      "shipyard": "img/skin/10102/101021/shipyard.png",
+      "spine_chibi": null,
+      "spine": null,
+      "live2d": null
+    },
+    {
+      "id": 101022,
+      "gid": 10102,
+      "name": "A Christmas Thank-You",
+      "type": "Christmas",
+      "desc": "Lexington gave me this Christmas costume as a thank-you for always supporting her. Commander, do you think I look... pretty in it?",
+      "tag": [
+        "dynamicbg"
+      ],
+      "illustrator": -1,
+      "illustrator2": -1,
+      "voice_actor": 178,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": "img/back/10102ground/125.png",
+      "background2": null,
+      "painting": "img/skin/10102/101022/painting.png",
+      "painting_n": null,
+      "banner": "img/skin/10102/101022/banner.png",
+      "chibi": "img/skin/10102/101022/chibi.png",
+      "icon": "img/skin/10102/101022/icon.png",
+      "qicon": "img/skin/10102/101022/qicon.png",
+      "shipyard": "img/skin/10102/101022/shipyard.png",
+      "spine_chibi": null,
+      "spine": null,
+      "live2d": null
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loading</title>
+
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      color: white;
+      background: #0b0f1a;
+      display: flex;
+      flex-direction: column;      /* 🔥 critical fix */
+      justify-content: center;
+      align-items: center;
+
+      overflow: hidden;
+    }
+
+    /* Logo */
+    .logo {
+      width: 250px;
+      height: auto;
+      margin-bottom: 20px;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    h3 {
+      margin: 0 0 16px 0;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* Loader wrapper */
+    .loader-container {
+      width: 80%;
+      max-width: 600px;
+      min-width: 300px;
+      height: 18px;
+
+      background-color: rgba(255, 255, 255, 0.25);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Loader bar */
+    .loader {
+      height: 100%;
+      width: 0%;
+      background-color: #ffffff;
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Logo -->
+  <img
+    src="./img/iconlogo/appLogo.ico"
+    alt="App Logo"
+    class="logo"
+  />
+
+  <!-- Text -->
+  <h3>Application Loading...</h3>
+
+  <!-- Progress bar -->
+  <div class="loader-container">
+    <div class="loader" id="loader"></div>
+  </div>
+
+  <!-- Fake progress (optional, safe for splash) -->
+  <script>
+    const loader = document.getElementById('loader');
+    let progress = 0;
+
+    const interval = setInterval(() => {
+      progress += Math.random() * 8;
+      if (progress >= 100) progress = 100;
+      loader.style.width = progress + '%';
+
+      if (progress === 100) clearInterval(interval);
+    }, 150);
+  </script>
+</body>
+</html>
