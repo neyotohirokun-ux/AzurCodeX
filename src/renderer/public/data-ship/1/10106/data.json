@@ -1,0 +1,155 @@
+{
+    "id": 8,
+    "gid": 10106,
+    "cid": 1,
+    "sid": [
+      101061,
+      101062,
+      101063,
+      101064
+    ],
+    "name": "Craven",
+    "codename": "USS Craven",
+    "class": "Gridley Class",
+    "nationality": 1,
+    "obtain": [
+      "Requisition (random chance)",
+      "Explore Chapter 1-1",
+      "Light ship Construction"
+    ],
+    "type": 1,
+    "rarity": 2,
+    "armor": 1,
+    "hexagon": [
+      "C",
+      "B",
+      "E",
+      "B",
+      "C",
+      "C"
+    ],
+    "share_group": [],
+    "breakout": [
+      [
+        "Unlock All Out Assault I",
+        "Torpedo efficiency +5%"
+      ],
+      [
+        "Torpedo base +1",
+        "Torpedo preload +1",
+        "Torpedo efficiency +10%"
+      ],
+      [
+        "Improve All Out Assault",
+        "All weapons' efficiency +5%"
+      ]
+    ],
+    "equipment": {
+      "1": {
+        "default": 100,
+        "slot": 1,
+        "type": [
+          1
+        ],
+        "mount": 1,
+        "preload": 0,
+        "efficiency": 1.15
+      },
+      "2": {
+        "default": 107,
+        "slot": 2,
+        "type": [
+          5
+        ],
+        "mount": 2,
+        "preload": 1,
+        "efficiency": 1.35
+      },
+      "3": {
+        "default": 104,
+        "slot": 3,
+        "type": [
+          6
+        ],
+        "mount": 1,
+        "preload": 0,
+        "efficiency": 1.25
+      },
+      "4": {
+        "default": null,
+        "slot": 4,
+        "type": [
+          10,
+          14
+        ],
+        "mount": 1,
+        "preload": 0,
+        "efficiency": 1
+      },
+      "5": {
+        "default": null,
+        "slot": 5,
+        "type": [
+          10,
+          14
+        ],
+        "mount": 1,
+        "preload": 0,
+        "efficiency": 1
+      }
+    },
+    "base": {
+        "health": 286,
+        "firepower": 13,
+        "torpedo": 82,
+        "antiair": 32,
+        "aviation": 0,
+        "reload": 72,
+        "accuracy": 71,
+        "evasion": 60,
+        "speed": 46.2,
+        "luck": 72,
+        "asw": 47
+    },
+    "growth": {
+        "health": 1818,
+        "firepower": 73,
+        "torpedo": 434,
+        "antiair": 175,
+        "aviation": 0,
+        "reload": 199,
+        "accuracy": 218,
+        "evasion": 210,
+        "speed": 46,
+        "luck": 72,
+        "asw": 195
+    },
+    "enhance": {
+      "firepower": 13,
+      "torpedo": 81,
+      "reload": 54
+    },
+    "skill": {
+      "2051": {
+        "id": 2051,
+        "parent": 2051,
+        "upgrade": null,
+        "downgrade": null,
+        "requirement": "Default"
+      },
+      "20031": {
+        "id": 20031,
+        "parent": 20031,
+        "upgrade": 20032,
+        "downgrade": null,
+        "requirement": "Limit Break 1"
+      },
+      "20032": {
+        "id": 20032,
+        "parent": 20031,
+        "upgrade": null,
+        "downgrade": 20031,
+        "requirement": "Limit Break 3"
+      }
+    }
+  }

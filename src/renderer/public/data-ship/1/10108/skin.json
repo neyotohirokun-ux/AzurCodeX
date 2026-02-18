@@ -1,0 +1,47 @@
+{
+    "skins": [{
+        "id": 101080,
+        "gid": 10108,
+        "name": "Maury",
+        "type": "Default",
+        "desc": "Gridley-class destroyer, Maury, Hull Number DD-401\nUnlock build after receiving",
+        "tag": [],
+        "illustrator": 3,
+        "illustrator2": -1,
+        "voice_actor": 88,
+        "voice_actor2": -1,
+        "bgm": null,
+        "background": null,
+        "background2": null,
+        "painting": "img/skin/10108/101080/painting.png",
+        "painting_n": null,
+        "banner": "img/skin/10108/101080/banner.png",
+        "chibi": "img/skin/10108/101080/chibi.png",
+        "icon": "img/skin/10108/101080/icon.png",
+        "qicon": "img/skin/10108/101080/qicon.png",
+        "shipyard": "img/skin/10108/101080/shipyard.png"
+      },
+      {
+        "id": 101089,
+        "gid": 10108,
+        "name": "Maury (Retrofit)",
+        "type": "Retrofit",
+        "desc": "Maury, fourth ship of the Gridley-class destroyer squadron, is back with new equipment! I feel like I can run even faster than before! Commander, can we go for a test run?",
+        "tag": [],
+        "illustrator": 3,
+        "illustrator2": -1,
+        "voice_actor": 88,
+        "voice_actor2": -1,
+        "bgm": null,
+        "background": null,
+        "background2": null,
+        "painting": "img/skin/10108/101089/painting.png",
+        "painting_n": "img/skin/10108/101089/painting_n.png",
+        "banner": "img/skin/10108/101089/banner.png",
+        "chibi": "img/skin/10108/101089/chibi.png",
+        "icon": "img/skin/10108/101089/icon.png",
+        "qicon": "img/skin/10108/101089/qicon.png",
+        "shipyard": "img/skin/10108/101089/shipyard.png"
+      }
+    ]
+  }

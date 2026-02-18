@@ -1,0 +1,49 @@
+{
+    "skins": [{
+        "id": 101050,
+        "gid": 10105,
+        "name": "Gridley",
+        "type": "Default",
+        "desc": "Gridley-class destroyer - Gridley, Hull Number DD-380!",
+        "tag": [],
+        "illustrator": 3,
+        "illustrator2": -1,
+        "voice_actor": 25,
+        "voice_actor2": -1,
+        "bgm": null,
+        "background": null,
+        "background2": null,
+        "painting": "img/skin/10105/101050/painting.png",
+        "painting_n": null,
+        "banner": "img/skin/10105/101050/banner.png",
+        "chibi": "img/skin/10105/101050/chibi.png",
+        "icon": "img/skin/10105/101050/icon.png",
+        "qicon": "img/skin/10105/101050/qicon.png",
+        "shipyard": "img/skin/10105/101050/shipyard.png"
+      },
+      {
+        "id": 101051,
+        "gid": 10105,
+        "name": "Christmas Photoshoot",
+        "type": "Christmas",
+        "desc": "Commander, Merry Christmas! Guhehe~ Won't you attend my \"Super Special Sexy Sara (tentative)\" photoshoot event?",
+        "tag": [
+          "bg"
+        ],
+        "illustrator": 3,
+        "illustrator2": -1,
+        "voice_actor": 25,
+        "voice_actor2": -1,
+        "bgm": null,
+        "background": "img/bgii/100.png",
+        "background2": null,
+        "painting": "img/skin/10105/101051/painting.png",
+        "painting_n": null,
+        "banner": "img/skin/10105/101051/banner.png",
+        "chibi": "img/skin/10105/101051/chibi.png",
+        "icon": "img/skin/10105/101051/icon.png",
+        "qicon": "img/skin/10105/101051/qicon.png",
+        "shipyard": "img/skin/10105/101051/shipyard.png"
+      }
+    ]
+  }

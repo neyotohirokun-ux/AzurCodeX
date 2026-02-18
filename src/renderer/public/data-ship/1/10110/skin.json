@@ -1,0 +1,51 @@
+{
+    "skins": [
+      {
+        "id": 101100,
+        "gid": 10110,
+        "name": "William D. Porter",
+        "type": "Default",
+        "desc": "Fletcher-class destroyer – William D. Porter, Hull Number DD-579.",
+        "tag": [],
+        "illustrator": 4,
+        "illustrator2": -1,
+        "voice_actor": 168,
+        "voice_actor2": -1,
+        "bgm": null,
+        "background": null,
+        "background2": null,
+        "painting": "img/skin/10110/101100/painting.png",
+        "painting_n": "img/skin/10110/101100/painting_n.png",
+        "banner": "img/skin/10110/101100/banner.png",
+        "chibi": "img/skin/10110/101100/chibi.png",
+        "icon": "img/skin/10110/101100/icon.png",
+        "qicon": "img/skin/10110/101100/qicon.png",
+        "shipyard": "img/skin/10110/101100/shipyard.png"
+      },
+      {
+        "id": 101101,
+        "gid": 10110,
+        "name": "The Daredevil's Maidly Service",
+        "type": "Maid",
+        "desc": "Commander, um, we agreed that I'd be a maid for a day, right? Ahahaha... See, I couldn't make it in time. Ran into a teensy bit of trouble, and, well... Basically, I need you to come help me!",
+        "tag": [
+          "dynamic+",
+          "bg"
+        ],
+        "illustrator": -1,
+        "illustrator2": -1,
+        "voice_actor": 168,
+        "voice_actor2": -1,
+        "bgm": null,
+        "background": "img/bgii/529.png",
+        "background2": null,
+        "painting": "img/skin/10110/101101/painting.png",
+        "painting_n": "img/skin/10110/101101/painting_n.png",
+        "banner": "img/skin/10110/101101/banner.png",
+        "chibi": "img/skin/10110/101101/chibi.png",
+        "icon": "img/skin/10110/101101/icon.png",
+        "qicon": "img/skin/10110/101101/qicon.png",
+        "shipyard": "img/skin/10110/101101/shipyard.png"
+      }
+    ]
+  }

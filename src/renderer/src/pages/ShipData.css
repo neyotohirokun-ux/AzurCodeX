@@ -276,6 +276,10 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  
+  max-height: 300px;   /* adjust as needed */
+  overflow-y: auto;    /* enable vertical scroll */
+  padding-right: 8px;  /* optional: prevent content from being hidden behind scrollbar */
 }
 
 .shipdata-skill-card {

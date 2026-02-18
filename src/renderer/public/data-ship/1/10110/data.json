@@ -1,0 +1,167 @@
+{
+    "id": 12,
+    "gid": 10110,
+    "cid": 1,
+    "sid": [
+      101101,
+      101102,
+      101103,
+      101104
+    ],
+    "name": "William D. Porter",
+    "codename": "USS William D. Porter",
+    "class": "Fletcher Class",
+    "nationality": 1,
+    "obtain": [
+      "Event: A Note Through the Firmament"
+    ],
+    "type": 1,
+    "rarity": 6,
+    "armor": 1,
+    "hexagon": [
+      "C",
+      "C",
+      "E",
+      "B",
+      "C",
+      "C"
+    ],
+    "share_group": [],
+    "breakout": [
+      [
+        "Unlock All Out Assault",
+        "All weapons' efficiency +2%"
+      ],
+      [
+        "Torpedo base +1",
+        "Torpedo preload +1",
+        "All weapons' efficiency +3%"
+      ],
+      [
+        "Improve All Out Assault",
+        "All weapons' efficiency +5%"
+      ]
+    ],
+    "equipment": {
+      "1": {
+        "default": 100,
+        "slot": 1,
+        "type": [
+          1
+        ],
+        "mount": 1,
+        "preload": 0,
+        "efficiency": 1.4
+      },
+      "2": {
+        "default": 108,
+        "slot": 2,
+        "type": [
+          5
+        ],
+        "mount": 2,
+        "preload": 1,
+        "efficiency": 1.4
+      },
+      "3": {
+        "default": 104,
+        "slot": 3,
+        "type": [
+          6
+        ],
+        "mount": 1,
+        "preload": 0,
+        "efficiency": 1.8
+      },
+      "4": {
+        "default": null,
+        "slot": 4,
+        "type": [
+          10,
+          14
+        ],
+        "mount": 1,
+        "preload": 0,
+        "efficiency": 1
+      },
+      "5": {
+        "default": null,
+        "slot": 5,
+        "type": [
+          10,
+          14
+        ],
+        "mount": 1,
+        "preload": 0,
+        "efficiency": 1
+      }
+    },
+    "base": {
+        "health": 370,
+        "firepower": 24,
+        "torpedo": 85,
+        "antiair": 55,
+        "aviation": 0,
+        "reload": 88,
+        "accuracy": 71,
+        "evasion": 59,
+        "speed": 42,
+        "luck": 6,
+        "asw": 71
+    },
+    "growth": {
+        "health": 2350,
+        "firepower": 133,
+        "torpedo": 448,
+        "antiair": 300,
+        "aviation": 0,
+        "reload": 243,
+        "accuracy": 218,
+        "evasion": 230,
+        "speed": 42,
+        "luck": 6,
+        "asw": 290
+    },
+    "enhance": {
+      "firepower": 24,
+      "torpedo": 84,
+      "reload": 66
+    },
+    "skill": {
+      "151920": {
+        "id": 151920,
+        "parent": 151920,
+        "upgrade": null,
+        "downgrade": null,
+        "requirement": "Default"
+      },
+      "151930": {
+        "id": 151930,
+        "parent": 151930,
+        "upgrade": null,
+        "downgrade": null,
+        "requirement": "Default"
+      },
+      "151940": {
+        "id": 151940,
+        "parent": 151940,
+        "upgrade": null,
+        "downgrade": null,
+        "requirement": "Default"
+      },
+      "30561": {
+        "id": 30561,
+        "parent": 30561,
+        "upgrade": 30562,
+        "downgrade": null,
+        "requirement": "Limit Break 1"
+      },
+      "30562": {
+        "id": 30562,
+        "parent": 30561,
+        "upgrade": null,
+        "downgrade": 30561,
+        "requirement": "Limit Break 3"
+      }
+    }
+  }
