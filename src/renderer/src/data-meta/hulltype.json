@@ -1,0 +1,243 @@
+{
+  "1": {
+    "id": 1,
+    "name": "Destroyer",
+    "short": "DD",
+    "position": "vanguard",
+    "icon": "img/type/1.png",
+    "tech": "img/type/tech_1.png",
+    "title": "img/type/title_1.png",
+    "label": {
+      "DD": "img/type/label_1.png",
+      "CL/DD": "img/type/label_55.png"
+    }
+  },
+  "2": {
+    "id": 2,
+    "name": "Light Cruiser",
+    "short": "CL",
+    "position": "vanguard",
+    "icon": "img/type/2.png",
+    "tech": "img/type/tech_2.png",
+    "title": "img/type/title_2.png",
+    "label": {
+      "CL": "img/type/label_2.png",
+      "CL/DD": "img/type/label_55.png"
+    }
+  },
+  "3": {
+    "id": 3,
+    "name": "Heavy Cruiser",
+    "short": "CA",
+    "position": "vanguard",
+    "icon": "img/type/3.png",
+    "tech": "img/type/tech_3.png",
+    "title": "img/type/title_3.png",
+    "label": {
+      "CA": "img/type/label_3.png",
+      "CA/CB": "img/type/label_13.png"
+    }
+  },
+  "4": {
+    "id": 4,
+    "name": "Battlecruiser",
+    "short": "BC",
+    "position": "main",
+    "icon": "img/type/4.png",
+    "tech": "img/type/tech_4.png",
+    "title": "img/type/title_4.png",
+    "label": {
+      "BC": "img/type/label_4.png",
+      "BB/BC": "img/type/label_11.png"
+    }
+  },
+  "5": {
+    "id": 5,
+    "name": "Battleship",
+    "short": "BB",
+    "position": "main",
+    "icon": "img/type/5.png",
+    "tech": "img/type/tech_5.png",
+    "title": "img/type/title_5.png",
+    "label": {
+      "BB": "img/type/label_5.png",
+      "BB/BC": "img/type/label_11.png"
+    }
+  },
+  "6": {
+    "id": 6,
+    "name": "Light Carrier",
+    "short": "CVL",
+    "position": "main",
+    "icon": "img/type/6.png",
+    "tech": "img/type/tech_6.png",
+    "title": "img/type/title_6.png",
+    "label": {
+      "CVL": "img/type/label_6.png",
+      "CV/CVL": "img/type/label_12.png"
+    }
+  },
+  "7": {
+    "id": 7,
+    "name": "Aircraft Carrier",
+    "short": "CV",
+    "position": "main",
+    "icon": "img/type/7.png",
+    "tech": "img/type/tech_7.png",
+    "title": "img/type/title_7.png",
+    "label": {
+      "CV": "img/type/label_7.png",
+      "CV/CVL": "img/type/label_12.png"
+    }
+  },
+  "8": {
+    "id": 8,
+    "name": "Submarine",
+    "short": "SS",
+    "position": "submarine",
+    "icon": "img/type/8.png",
+    "tech": "img/type/tech_8.png",
+    "title": "img/type/title_8.png",
+    "label": {
+      "SS": "img/type/label_19.png",
+      "SS/SSV": "img/type/label_8.png"
+    }
+  },
+  "10": {
+    "id": 10,
+    "name": "Aviation Battleship",
+    "short": "BBV",
+    "position": "main",
+    "icon": "img/type/10.png",
+    "tech": "img/type/tech_10.png",
+    "title": "img/type/title_10.png",
+    "label": {
+      "BBV": "img/type/label_10.png"
+    }
+  },
+  "12": {
+    "id": 12,
+    "name": "Repair",
+    "short": "AR",
+    "position": "main",
+    "icon": "img/type/12.png",
+    "tech": "img/type/tech_12.png",
+    "title": "img/type/title_12.png",
+    "label": {
+      "AR": "img/type/label_20.png"
+    }
+  },
+  "13": {
+    "id": 13,
+    "name": "Monitor",
+    "short": "BM",
+    "position": "main",
+    "icon": "img/type/13.png",
+    "tech": "img/type/tech_13.png",
+    "title": "img/type/title_13.png",
+    "label": {
+      "BM": "img/type/label_21.png"
+    }
+  },
+  "17": {
+    "id": 17,
+    "name": "Aviation Submarine",
+    "short": "SSV",
+    "position": "submarine",
+    "icon": "img/type/17.png",
+    "tech": "img/type/tech_17.png",
+    "title": "img/type/title_17.png",
+    "label": {
+      "SSV": "img/type/label_17.png",
+      "SS/SSV": "img/type/label_8.png"
+    }
+  },
+  "18": {
+    "id": 18,
+    "name": "Large Cruiser",
+    "short": "CB",
+    "position": "vanguard",
+    "icon": "img/type/18.png",
+    "tech": "img/type/tech_18.png",
+    "title": "img/type/title_18.png",
+    "label": {
+      "CB": "img/type/label_18.png",
+      "CA/CB": "img/type/label_13.png"
+    }
+  },
+  "19": {
+    "id": 19,
+    "name": "Munition",
+    "short": "AE",
+    "position": "vanguard",
+    "icon": "img/type/19.png",
+    "tech": "img/type/tech_19.png",
+    "title": "img/type/title_19.png",
+    "label": {
+      "AE": "img/type/label_22.png"
+    }
+  },
+  "20": {
+    "id": 20,
+    "name": "Guided-missile Destroyer",
+    "short": "DDGV",
+    "position": "vanguard",
+    "icon": "img/type/20.png",
+    "tech": null,
+    "title": "img/type/title_20.png",
+    "label": {
+      "DDG": "img/type/label_23.png"
+    }
+  },
+  "21": {
+    "id": 21,
+    "name": "Guided-missile Destroyer",
+    "short": "DDGM",
+    "position": "main",
+    "icon": "img/type/21.png",
+    "tech": null,
+    "title": "img/type/title_21.png",
+    "label": {
+      "DDG": "img/type/label_23.png"
+    }
+  },
+  "22": {
+    "id": 22,
+    "name": "Sailing Frigate",
+    "short": "IXS",
+    "position": "submarine",
+    "icon": "img/type/22.png",
+    "tech": "img/type/tech_22.png",
+    "title": "img/type/title_22.png",
+    "label": {
+      "IX": "img/type/label_27.png",
+      "IXS": "img/type/label_24.png"
+    }
+  },
+  "23": {
+    "id": 23,
+    "name": "Sailing Frigate",
+    "short": "IXV",
+    "position": "vanguard",
+    "icon": "img/type/23.png",
+    "tech": "img/type/tech_23.png",
+    "title": "img/type/title_23.png",
+    "label": {
+      "IX": "img/type/label_27.png",
+      "IXV": "img/type/label_25.png"
+    }
+  },
+  "24": {
+    "id": 24,
+    "name": "Sailing Frigate",
+    "short": "IXM",
+    "position": "main",
+    "icon": "img/type/24.png",
+    "tech": "img/type/tech_24.png",
+    "title": "img/type/title_24.png",
+    "label": {
+      "IX": "img/type/label_27.png",
+      "IXM": "img/type/label_26.png"
+    }
+  }
+}

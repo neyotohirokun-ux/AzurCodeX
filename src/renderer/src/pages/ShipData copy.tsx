@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useShipData } from "../hooks/useShipData";
 import { useShipSkin } from "../hooks/useShipSkin";
 import "./ShipData.css";
-import { Navigation } from "../components/navigation";
+import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/footer";
 
 export const ShipData: React.FC = () => {

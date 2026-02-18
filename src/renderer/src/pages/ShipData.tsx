@@ -5,9 +5,11 @@ import { useShipSkin } from "../hooks/useShipSkin";
 import { useRarity } from "../hooks/useRarity";
 import { useArmor } from "../hooks/useArmor";
 import { useNation } from "../hooks/useNations";
+import { useHullType } from "../hooks/useHullType";
 import "./ShipData.css";
-import { Navigation } from "../components/navigation";
+import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/footer";
+import { LoadingImage } from "../components/LoadingImage";
 
 export const ShipData: React.FC = () => {
   useEffect(() => {
@@ -22,6 +24,8 @@ export const ShipData: React.FC = () => {
   const armorData = useArmor(data?.armor);
   const { getNation } = useNation("en"); // lang can be dynamic if needed
   const nationData = getNation(String(data?.nationality));
+  const { getHullById } = useHullType();
+  const hull = getHullById(Number(data?.type));
 
   if (loading) return <p>Loading ship...</p>;
   if (error) return <p>{error}</p>;
@@ -37,7 +41,7 @@ export const ShipData: React.FC = () => {
         {/* Header Section */}
         <div className="shipdata-icon-and-name">
           {activeSkinData && (
-            <img
+            <LoadingImage
               src={`${import.meta.env.BASE_URL}${activeSkinData.icon}`}
               alt={activeSkinData.name}
               className="shipdata-icon-img"
@@ -93,7 +97,9 @@ export const ShipData: React.FC = () => {
                     </tr>
                     <tr>
                       <td>Type:</td>
-                      <td>{data.type}</td>
+                      <td>
+                        {hull ? `(${hull.short}) ${hull.name}` : "Unknown"}
+                      </td>
                     </tr>
                     <tr>
                       <td>Armor:</td>
@@ -114,7 +120,7 @@ export const ShipData: React.FC = () => {
               {/* Shipyard Image */}
               <div className="shipdata-meta-img">
                 {activeSkinData && (
-                  <img
+                  <LoadingImage
                     src={`${import.meta.env.BASE_URL}${activeSkinData.shipyard}`}
                     alt={activeSkinData.name}
                     className="shipdata-shipyard-img"
@@ -131,7 +137,7 @@ export const ShipData: React.FC = () => {
                 <div className="shipdata-skins">
                   {skins?.skins.map((skin, index) => (
                     <div key={skin.id} className="shipdata-skin-card">
-                      <img
+                      <LoadingImage
                         src={`${import.meta.env.BASE_URL}${skin.icon}`}
                         alt={skin.name}
                         className={`shipdata-skin-img ${index === activeSkin ? "active" : ""}`}

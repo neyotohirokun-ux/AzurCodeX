@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useShipSkin } from "../hooks/useShipSkin";
-import { Navigation } from "../components/navigation";
+import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/footer";
 import Zoom from "../components/Zoom";
 import SpinePlayer from "../components/spinePlayer";
@@ -177,8 +177,10 @@ export const ShipSkin: React.FC = () => {
 
         {/* RIGHT MAIN PREVIEW */}
         <main className="shipskin-main">
-          {(viewMode === "painting" || viewMode === "painting_n") && hasZoom ? (
-            zoomEnabled ? (
+          {/* Paintings (WB / WTB) */}
+          {(viewMode === "painting" || viewMode === "painting_n") &&
+            hasZoom &&
+            (zoomEnabled ? (
               <Zoom
                 src={`${import.meta.env.BASE_URL}${getMainSource()}`}
                 enabled={true}
@@ -189,40 +191,52 @@ export const ShipSkin: React.FC = () => {
                 alt={activeSkinData.name}
                 className="shipskin-main-img"
               />
-            )
-          ) : viewMode === "dynamic" && hasDynamic ? (
-            spineReady ? (
-              <SpinePlayer
-                key={getSpinePath(spineField)}
-                spinePath={getSpinePath(spineField)}
-                animationName="normal"
-                width={600}
-                height={600}
-              />
-            ) : (
-              <p>Loading Spine...</p>
-            )
-          ) : viewMode === "chibi" && hasChibiSafe ? (
-            spineReady ? (
-              <SpinePlayer
-                key={getSpinePath(chibiField)}
-                spinePath={getSpinePath(chibiField)}
-                animationName="idle"
-                width={400}
-                height={400}
-              />
-            ) : (
-              <p>Loading Spine...</p>
-            )
-          ) : viewMode === "live2d" && hasLive2D ? (
-            <p>Live2D not implemented yet</p>
-          ) : (
-            <img
-              src={`${import.meta.env.BASE_URL}${getMainSource()}`}
-              alt={activeSkinData.name}
-              className="shipskin-main-img"
+            ))}
+
+          {/* Dynamic Spine Still Testing this idiot */}
+          {viewMode === "dynamic" && hasDynamic && spineReady && (
+            <SpinePlayer
+              key={getSpinePath(spineField)}
+              spinePath="/spine/ship/buli_super/"
+              skeletonFile="buli_super.skel"
+              atlasFile="buli_super.atlas"
+              showControls={true}
             />
           )}
+
+          {viewMode === "dynamic" && hasDynamic && !spineReady && (
+            <p>Loading Spine...</p>
+          )}
+
+          {/* Chibi Spine */}
+          {viewMode === "chibi" && hasChibiSafe && spineReady && (
+            <SpinePlayer
+              key={getSpinePath(chibiField)}
+              spinePath={getSpinePath(chibiField)}
+              animationName="idle"
+              width={400}
+              height={400}
+            />
+          )}
+
+          {viewMode === "chibi" && hasChibiSafe && !spineReady && (
+            <p>Loading Spine...</p>
+          )}
+
+          {/* Live2D placeholder */}
+          {viewMode === "live2d" && hasLive2D && (
+            <p>Live2D not implemented yet</p>
+          )}
+
+          {/* Fallback for painting when zoom not enabled */}
+          {(viewMode === "painting" || viewMode === "painting_n") &&
+            !hasZoom && (
+              <img
+                src={`${import.meta.env.BASE_URL}${getMainSource()}`}
+                alt={activeSkinData.name}
+                className="shipskin-main-img"
+              />
+            )}
         </main>
       </div>
 

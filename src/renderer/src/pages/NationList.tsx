@@ -3,7 +3,7 @@ import { useNation } from "../hooks/useNations";
 import { useNavigate } from "react-router-dom"; // ✅ ADD
 import "./NationList.css";
 import { Footer } from "../components/footer";
-import { Navigation } from "../components/navigation";
+import { Navigation } from "../components/Navigation";
 
 export const NationList: React.FC = () => {
   const { nations, getNation } = useNation("en");

@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useNation } from "../hooks/useNations";
-import { Navigation } from "../components/navigation";
+import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/footer";
 import "./NationData.css";
 import { ShipList } from "../components/ShipList";
