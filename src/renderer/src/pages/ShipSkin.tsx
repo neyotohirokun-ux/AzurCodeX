@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useShipSkin } from "../hooks/useShipSkin";
-import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/footer";
 import Zoom from "../components/Zoom";
 import SpinePlayer from "../components/spinePlayer";
@@ -75,8 +74,6 @@ export const ShipSkin: React.FC = () => {
 
   return (
     <div className="shipskin-container">
-      <Navigation />
-
       <div className="shipskin-layout">
         {/* LEFT SIDEBAR */}
         <aside className="shipskin-sidebar">

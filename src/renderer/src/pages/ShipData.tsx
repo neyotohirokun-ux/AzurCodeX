@@ -7,40 +7,69 @@ import { useArmor } from "../hooks/useArmor";
 import { useNation } from "../hooks/useNations";
 import { useHullType } from "../hooks/useHullType";
 import { useSkill } from "../hooks/useSkill";
-import "./ShipData.css";
-import { Navigation } from "../components/Navigation";
+import { useNavigation } from "../components/NavigationContext";
 import { Footer } from "../components/footer";
 import { LoadingImage } from "../components/LoadingImage";
+import "./ShipData.css";
 
 export const ShipData: React.FC = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+  // 🚨 Hooks first
   const { nationKey, gid } = useParams<{ nationKey: string; gid: string }>();
   const { data, loading, error } = useShipData(nationKey!, Number(gid));
   const { skins } = useShipSkin(nationKey!, Number(gid));
   const [activeSkin, setActiveSkin] = useState(0);
+
   const rarityData = useRarity(data?.rarity);
   const armorData = useArmor(data?.armor);
-  const { getNation } = useNation("en"); // lang can be dynamic if needed
+  const { getNation } = useNation("en");
   const nationData = getNation(String(data?.nationality));
   const { getHullById } = useHullType();
   const hull = getHullById(Number(data?.type));
   const { getSkillById } = useSkill();
 
+  const { crumbs, setCrumbs } = useNavigation();
+
+  // 🚨 Set breadcrumbs safely after data is loaded
+  useEffect(() => {
+    if (!data || !nationKey) return;
+
+    const newCrumbs = [
+      { label: "Nations", path: "/nationlist/0" },
+      {
+        label: nationData?.name ?? "Unknown Nation",
+        path: `/nationdata/${nationKey}`,
+      },
+      { label: data.name, path: `/shipdata/${nationKey}/${gid}` },
+    ];
+
+    // Only update if changed
+    const isSame =
+      crumbs.length === newCrumbs.length &&
+      crumbs.every(
+        (c, i) =>
+          c.label === newCrumbs[i].label && c.path === newCrumbs[i].path,
+      );
+
+    if (!isSame) setCrumbs(newCrumbs);
+  }, [data, nationKey, gid, nationData?.name, crumbs, setCrumbs]);
+
+  // Scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  // ✅ Conditional rendering after hooks
   if (loading) return <p>Loading ship...</p>;
   if (error) return <p>{error}</p>;
   if (!data) return <p>No ship data found.</p>;
 
   const activeSkinData = skins?.skins?.[activeSkin];
 
+  // ✅ Render content
   return (
     <div className="shipdata-container">
-      <Navigation />
-
       <section className="shipdata-sub-container">
-        {/* Header Section */}
+        {/* Header */}
         <div className="shipdata-icon-and-name">
           {activeSkinData && (
             <LoadingImage
@@ -52,12 +81,10 @@ export const ShipData: React.FC = () => {
           <h1>{data.name}</h1>
         </div>
 
-        {/* Main Content */}
+        {/* Meta Info */}
         <section className="shipdata-topcenter">
           <div className="shipdata-info">
-            {/* Meta Information Row */}
             <div className="shipdata-meta-row">
-              {/* Additional Info */}
               <div className="shipdata-meta-addinfo">
                 <table className="shipdata-toptable">
                   <thead>
@@ -83,18 +110,14 @@ export const ShipData: React.FC = () => {
                     </tr>
                     <tr>
                       <td>Nation:</td>
-                      <td>{nationData ? nationData.name : "Unknown Nation"}</td>
+                      <td>{nationData?.name ?? "Unknown Nation"}</td>
                     </tr>
                     <tr>
                       <td>Rarity:</td>
                       <td>
-                        {rarityData ? (
-                          <>
-                            {rarityData.name} {rarityData.stars}
-                          </>
-                        ) : (
-                          "Unknown"
-                        )}
+                        {rarityData
+                          ? `${rarityData.name} ${rarityData.stars}`
+                          : "Unknown"}
                       </td>
                     </tr>
                     <tr>
@@ -105,7 +128,7 @@ export const ShipData: React.FC = () => {
                     </tr>
                     <tr>
                       <td>Armor:</td>
-                      <td>{armorData ? armorData.name : "Unknown"}</td>
+                      <td>{armorData?.name ?? "Unknown"}</td>
                     </tr>
                     <tr>
                       <td>Obtain:</td>
@@ -135,7 +158,6 @@ export const ShipData: React.FC = () => {
                 <Link to={`/shipskin/${nationKey}/${gid}`}>
                   <h3 className="shipdata-skin-link">View Skins</h3>
                 </Link>
-
                 <div className="shipdata-skins">
                   {skins?.skins.map((skin, index) => (
                     <div key={skin.id} className="shipdata-skin-card">
@@ -153,10 +175,11 @@ export const ShipData: React.FC = () => {
           </div>
         </section>
 
+        {/* Skills Section */}
         <section className="shipdata-skill-section">
           <h3>Skills</h3>
           <div className="shipdata-skill-container">
-            {/* Left: Table */}
+            {/* Left Table */}
             <table className="shipdata-table shipdata-skill-table">
               <thead>
                 <tr>
@@ -174,8 +197,7 @@ export const ShipData: React.FC = () => {
               </tbody>
             </table>
 
-            {/* Right: Skill Icons and Descriptions */}
-
+            {/* Right Icons & Description */}
             <div className="shipdata-skill-info">
               {Object.values(data.skill).map((s: any) => {
                 const skillInfo = getSkillById(Number(s.id));
@@ -210,7 +232,6 @@ export const ShipData: React.FC = () => {
                 {data.retrofit && <td>Retrofit</td>}
               </tr>
             </thead>
-
             <tbody>
               {Object.keys(data.base).map((key) => {
                 const base = data.base[key as keyof typeof data.base] as number;
@@ -219,35 +240,32 @@ export const ShipData: React.FC = () => {
                 ] as number;
                 const growthDiff = growthValue - base;
 
-                // Growth display
-                let growthDisplay;
-                if (growthDiff === 0) {
-                  growthDisplay = growthValue.toLocaleString();
-                } else {
-                  growthDisplay = (
+                const growthDisplay =
+                  growthDiff === 0 ? (
+                    growthValue.toLocaleString()
+                  ) : (
                     <span className="stat-additional">
-                      (↑){growthValue.toLocaleString()}
+                      ({growthDiff >= 0 ? "↑" : "↓"})
+                      {growthValue.toLocaleString()}
                     </span>
                   );
-                }
 
-                // Retrofit display
                 let retrofitDisplay = null;
                 if (data.retrofit) {
-                  const retrofitBonus = (data.retrofit.bonus?.[
-                    key as keyof typeof data.retrofit.bonus
-                  ] ?? 0) as number;
+                  const retrofitBonus =
+                    data.retrofit.bonus?.[
+                      key as keyof typeof data.retrofit.bonus
+                    ] ?? 0;
                   const retrofitValue = growthValue + retrofitBonus;
-
-                  if (retrofitBonus === 0) {
-                    retrofitDisplay = retrofitValue.toLocaleString();
-                  } else {
-                    retrofitDisplay = (
+                  retrofitDisplay =
+                    retrofitBonus === 0 ? (
+                      retrofitValue.toLocaleString()
+                    ) : (
                       <span className="stat-additional">
-                        (↑){retrofitValue.toLocaleString()}
+                        ({retrofitBonus >= 0 ? "↑" : "↓"})
+                        {retrofitValue.toLocaleString()}
                       </span>
                     );
-                  }
                 }
 
                 return (
@@ -267,11 +285,9 @@ export const ShipData: React.FC = () => {
         {data.retrofit && (
           <section className="shipdata-retrofit-section">
             <h3>Retrofit</h3>
-
             <p>
               <strong>Required Level:</strong> {data.retrofit.level}
             </p>
-
             <table className="shipdata-table">
               <thead>
                 <tr>
@@ -295,28 +311,30 @@ export const ShipData: React.FC = () => {
           </section>
         )}
 
-        {/* Equipment Section */}
-        <h3>Equipment Slots</h3>
-        <table className="shipdata-table">
-          <thead>
-            <tr>
-              <td>Slot</td>
-              <td>Type</td>
-              <td>Mount</td>
-              <td>Efficiency</td>
-            </tr>
-          </thead>
-          <tbody>
-            {Object.entries(data.equipment).map(([slot, eq]: any) => (
-              <tr key={slot}>
-                <td>{slot}</td>
-                <td>{eq.type.join(", ")}</td>
-                <td>{eq.mount}</td>
-                <td>{Math.round(eq.efficiency * 100)}%</td>
+        {/* Equipment */}
+        <section className="shipdata-equip-section">
+          <h3>Equipment Slots</h3>
+          <table className="shipdata-table">
+            <thead>
+              <tr>
+                <td>Slot</td>
+                <td>Type</td>
+                <td>Mount</td>
+                <td>Efficiency</td>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {Object.entries(data.equipment).map(([slot, eq]: any) => (
+                <tr key={slot}>
+                  <td>{slot}</td>
+                  <td>{eq.type.join(", ")}</td>
+                  <td>{eq.mount}</td>
+                  <td>{Math.round(eq.efficiency * 100)}%</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
       </section>
 
       <Footer />

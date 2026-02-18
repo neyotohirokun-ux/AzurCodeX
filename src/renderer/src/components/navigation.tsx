@@ -2,10 +2,12 @@ import { NavLink } from "react-router-dom";
 import { Menu } from "lucide-react"; // Lucide icon
 import { useState, useEffect, useRef } from "react";
 import "./Navigation.css";
+import { useNavigation } from "../components/NavigationContext";
 
 export function Navigation() {
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { crumbs } = useNavigation();
 
   const handleCloseApp = () => {
     if (window.electronAPI) {
@@ -36,12 +38,15 @@ export function Navigation() {
       </div>
 
       <div className="nav-right">
-        <NavLink to="*" className="nav-link">
+        <NavLink to="/" className="nav-link">
           Home
         </NavLink>
-        <NavLink to="/nationlist/0" className="nav-link">
-          Nations
-        </NavLink>
+
+        {crumbs.map((crumb, index) => (
+          <NavLink key={index} to={crumb.path} className="nav-link">
+            {crumb.label}
+          </NavLink>
+        ))}
 
         <div className="nav-dropdown" ref={dropdownRef}>
           <button className="dropdown-toggle" onClick={() => setOpen(!open)}>

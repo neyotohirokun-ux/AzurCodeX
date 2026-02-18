@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNation } from "../hooks/useNations";
-import { useNavigate } from "react-router-dom"; // ✅ ADD
+import { useNavigate } from "react-router-dom";
+import { useNavigation } from "../components/NavigationContext";
 import "./NationList.css";
 import { Footer } from "../components/footer";
-import { Navigation } from "../components/Navigation";
 
 export const NationList: React.FC = () => {
   const { nations, getNation } = useNation("en");
   const [groupByFaction, setGroupByFaction] = useState(false);
-  const navigate = useNavigate(); // ✅ ADD
+  const navigate = useNavigate();
+  const { setCrumbs } = useNavigation();
+
+  // Set breadcrumbs for this page
+  useEffect(() => {
+    setCrumbs([{ label: "Nations", path: "/nationlist/0" }]);
+  }, [setCrumbs]);
 
   if (!nations || Object.keys(nations).length === 0)
     return <p>Loading nations...</p>;
 
+  // Group nations by faction or type
   const nationsByGroup: Record<string, any[]> = {};
   Object.keys(nations).forEach((key) => {
     const nation = getNation(key);
@@ -28,9 +35,8 @@ export const NationList: React.FC = () => {
 
   return (
     <div className="nations-container">
-      <Navigation />
-
       <div className="sub-container">
+        {/* Controls */}
         <div className="controls">
           <p>Toggle Nation by:</p>
           <label className="toggle-switch">
@@ -39,13 +45,14 @@ export const NationList: React.FC = () => {
               checked={groupByFaction}
               onChange={() => setGroupByFaction(!groupByFaction)}
             />
-            :<span className="slider"></span>
+            <span className="slider"></span>
           </label>
           <div className="switch-label">
             {groupByFaction ? "Faction" : "Type"}
           </div>
         </div>
 
+        {/* Nation Groups */}
         {Object.keys(nationsByGroup).map((group) => (
           <div
             key={group}
@@ -58,7 +65,7 @@ export const NationList: React.FC = () => {
                 <div
                   key={nation.id}
                   className="nation-card"
-                  onClick={() => navigate(`/nationdata/${nation.objectKey}`)} // ✅ ADD
+                  onClick={() => navigate(`/nationdata/${nation.objectKey}`)}
                 >
                   {nation.logo && (
                     <img

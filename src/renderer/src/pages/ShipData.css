@@ -49,7 +49,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border-block: 2px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-top-left-radius: 30px;
 }
 
 /* Info Container */
@@ -210,11 +211,22 @@
   }
 }
 
-/* ===== SECTION BORDER =====*/
+/* ===== SECTION CONFIG =====*/
 .shipdata-skill-section,
 .shipdata-stats-section,
-.shipdata-retrofit-section {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+.shipdata-retrofit-section,
+.shipdata-equip-section {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  padding-inline: 1rem;
+}
+
+.shipdata-skill-section h3,
+.shipdata-stats-section h3,
+.shipdata-retrofit-section h3,
+.shipdata-equip-section h3{
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
 }
 
 
