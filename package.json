@@ -1,7 +1,7 @@
 {
   "name": "azur_code_x",
   "private": true,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "author": "Neyoto Hiro <neyotohirokun@gmail.com>",
   "type": "module",
   "main": "out/main/main.js",
