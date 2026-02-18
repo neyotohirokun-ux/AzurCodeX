@@ -30,6 +30,20 @@ export interface ShipData {
   growth: ShipBaseStats;
   equipment: Record<string, unknown>;
   skill: Record<string, unknown>;
+
+  retrofit?: ShipRetrofit;
+}
+
+export interface ShipRetrofit {
+  id: number;
+  level: number;
+  bonus: {
+    [key: string]: number;
+  };
+  skill: number;
+  skin: number;
+  armor: number;
+  hexagon: string[];
 }
 
 export interface ShipSkin {

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useShipList } from "../hooks/useShipList";
 import { useShipData } from "../hooks/useShipData";
 import { useShipSkin } from "../hooks/useShipSkin";
+import { useRarity } from "../hooks/useRarity";
 import "./ShipList.css";
 
 interface ShipListProps {
@@ -33,6 +34,7 @@ interface ShipCardProps {
 const ShipCard: React.FC<ShipCardProps> = ({ nationKey, gid }) => {
   const { data } = useShipData(nationKey, gid);
   const { skins } = useShipSkin(nationKey, gid);
+  const rarityData = useRarity(data?.rarity);
   const navigate = useNavigate();
 
   if (!data || !skins) return <div className="ship-card">Loading...</div>;
@@ -52,7 +54,14 @@ const ShipCard: React.FC<ShipCardProps> = ({ nationKey, gid }) => {
       />
       <h3 className="ship-card-name">{data.name}</h3>
       <p className="ship-card-class">{data.class}</p>
-      <p className="ship-card-type">Rarity: {data.rarity}</p>
+      <p className="ship-card-type">
+        {" "}
+        {rarityData ? <>{rarityData.name}</> : "Unknown"}
+      </p>
+      <p className="ship-card-type">
+        {" "}
+        {rarityData ? <>{rarityData.stars}</> : "Unknown"}
+      </p>
     </div>
   );
 };

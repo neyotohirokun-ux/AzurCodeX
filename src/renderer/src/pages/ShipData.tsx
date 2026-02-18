@@ -6,6 +6,7 @@ import { useRarity } from "../hooks/useRarity";
 import { useArmor } from "../hooks/useArmor";
 import { useNation } from "../hooks/useNations";
 import { useHullType } from "../hooks/useHullType";
+import { useSkill } from "../hooks/useSkill";
 import "./ShipData.css";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/footer";
@@ -26,6 +27,7 @@ export const ShipData: React.FC = () => {
   const nationData = getNation(String(data?.nationality));
   const { getHullById } = useHullType();
   const hull = getHullById(Number(data?.type));
+  const { getSkillById } = useSkill();
 
   if (loading) return <p>Loading ship...</p>;
   if (error) return <p>{error}</p>;
@@ -148,10 +150,14 @@ export const ShipData: React.FC = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Skills Section */}
-            <h3>Skills</h3>
-            <table className="shipdata-table">
+        <section className="shipdata-skill-section">
+          <h3>Skills</h3>
+          <div className="shipdata-skill-container">
+            {/* Left: Table */}
+            <table className="shipdata-table shipdata-skill-table">
               <thead>
                 <tr>
                   <td>ID</td>
@@ -159,14 +165,36 @@ export const ShipData: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {Object.values(data.skill).map((skill: any) => (
-                  <tr key={skill.id}>
-                    <td>{skill.id}</td>
-                    <td>{skill.requirement}</td>
+                {Object.values(data.skill).map((s: any) => (
+                  <tr key={s.id}>
+                    <td>{s.id}</td>
+                    <td>{s.requirement}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+
+            {/* Right: Skill Icons and Descriptions */}
+
+            <div className="shipdata-skill-info">
+              {Object.values(data.skill).map((s: any) => {
+                const skillInfo = getSkillById(Number(s.id));
+                if (!skillInfo) return null;
+                return (
+                  <div key={s.id} className="shipdata-skill-card">
+                    <img
+                      src={`${import.meta.env.BASE_URL}${skillInfo.icon}`}
+                      alt={skillInfo.name}
+                      className="shipdata-skill-icon"
+                    />
+                    <div className="shipdata-skill-details">
+                      <strong>{skillInfo.name}</strong>
+                      <p>{skillInfo.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </section>
 
@@ -179,19 +207,93 @@ export const ShipData: React.FC = () => {
                 <td>Stat</td>
                 <td>Base</td>
                 <td>Growth</td>
+                {data.retrofit && <td>Retrofit</td>}
               </tr>
             </thead>
+
             <tbody>
-              {Object.keys(data.base).map((key) => (
-                <tr key={key}>
-                  <td>{key}</td>
-                  <td>{data.base[key as keyof typeof data.base]}</td>
-                  <td>{data.growth[key as keyof typeof data.growth]}</td>
-                </tr>
-              ))}
+              {Object.keys(data.base).map((key) => {
+                const base = data.base[key as keyof typeof data.base] as number;
+                const growthValue = data.growth[
+                  key as keyof typeof data.growth
+                ] as number;
+                const growthDiff = growthValue - base;
+
+                // Growth display
+                let growthDisplay;
+                if (growthDiff === 0) {
+                  growthDisplay = growthValue.toLocaleString();
+                } else {
+                  growthDisplay = (
+                    <span className="stat-additional">
+                      (↑){growthValue.toLocaleString()}
+                    </span>
+                  );
+                }
+
+                // Retrofit display
+                let retrofitDisplay = null;
+                if (data.retrofit) {
+                  const retrofitBonus = (data.retrofit.bonus?.[
+                    key as keyof typeof data.retrofit.bonus
+                  ] ?? 0) as number;
+                  const retrofitValue = growthValue + retrofitBonus;
+
+                  if (retrofitBonus === 0) {
+                    retrofitDisplay = retrofitValue.toLocaleString();
+                  } else {
+                    retrofitDisplay = (
+                      <span className="stat-additional">
+                        (↑){retrofitValue.toLocaleString()}
+                      </span>
+                    );
+                  }
+                }
+
+                return (
+                  <tr key={key}>
+                    <td>{key}</td>
+                    <td>{base.toLocaleString()}</td>
+                    <td>{growthDisplay}</td>
+                    {data.retrofit && <td>{retrofitDisplay}</td>}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </section>
+
+        {/* Retrofit Section */}
+        {data.retrofit && (
+          <section className="shipdata-retrofit-section">
+            <h3>Retrofit</h3>
+
+            <p>
+              <strong>Required Level:</strong> {data.retrofit.level}
+            </p>
+
+            <table className="shipdata-table">
+              <thead>
+                <tr>
+                  <td>Bonus</td>
+                  <td>Value</td>
+                </tr>
+              </thead>
+              <tbody>
+                {Object.entries(data.retrofit.bonus).map(([key, value]) => (
+                  <tr key={key}>
+                    <td>{key}</td>
+                    <td>
+                      {typeof value === "number" && value < 1
+                        ? `${Math.round(value * 100)}%`
+                        : value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </section>
+        )}
 
         {/* Equipment Section */}
         <h3>Equipment Slots</h3>

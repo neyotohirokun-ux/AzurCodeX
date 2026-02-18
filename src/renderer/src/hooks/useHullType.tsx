@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import hullTypeData from "../data-meta/hullType.json"; // adjust path if needed
 
 export interface HullType {

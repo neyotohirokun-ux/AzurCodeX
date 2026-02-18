@@ -1,0 +1,72 @@
+{
+  "skins": [
+      {
+      "id": 101030,
+      "gid": 10103,
+      "name": "Cassin",
+      "type": "Default",
+      "desc": "Mahan-class destroyer - Cassin, Hull Number DD-372!",
+      "tag": [],
+      "illustrator": 2,
+      "illustrator2": -1,
+      "voice_actor": 95,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": null,
+      "background2": null,
+      "painting": "img/skin/10103/101030/painting.png",
+      "painting_n": null,
+      "banner": "img/skin/10103/101030/banner.png",
+      "chibi": "img/skin/10103/101030/chibi.png",
+      "icon": "img/skin/10103/101030/icon.png",
+      "qicon": "img/skin/10103/101030/qicon.png",
+      "shipyard": "img/skin/10103/101030/shipyard.png"
+    },
+    {
+      "id": 101031,
+      "gid": 10103,
+      "name": "Shopping Carte Blanche",
+      "type": "School Girl",
+      "desc": "I know I said we'd go shopping after school, but walking is so exhausting... I'll just hitch a ride in this cart. Looks sturdy enough...",
+      "tag": [
+        "bg"
+      ],
+      "illustrator": 2,
+      "illustrator2": -1,
+      "voice_actor": 95,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": "img/bgii/103.png",
+      "background2": "img/bgii/1101.png",
+      "painting": "img/skin/10103/101031/painting.png",
+      "painting_n": "img/skin/10103/101031/painting_n.png",
+      "banner": "img/skin/10103/101031/banner.png",
+      "chibi": "img/skin/10103/101031/chibi.png",
+      "icon": "img/skin/10103/101031/icon.png",
+      "qicon": "img/skin/10103/101031/qicon.png",
+      "shipyard": "img/skin/10103/101031/shipyard.png"
+    },
+    {
+      "id": 101039,
+      "gid": 10103,
+      "name": "Cassin (Retrofit)",
+      "type": "Retrofit",
+      "desc": "Commander... I think I've been in the house too long. My body feels different... Oh? I've improved? I see... Wonderful! I guess I can keep staying inside...",
+      "tag": [],
+      "illustrator": 2,
+      "illustrator2": -1,
+      "voice_actor": 95,
+      "voice_actor2": -1,
+      "bgm": null,
+      "background": null,
+      "background2": null,
+      "painting": "img/skin/10103/101039/painting.png",
+      "painting_n": null,
+      "banner": "img/skin/10103/101039/banner.png",
+      "chibi": "img/skin/10103/101039/chibi.png",
+      "icon": "img/skin/10103/101039/icon.png",
+      "qicon": "img/skin/10103/101039/qicon.png",
+      "shipyard": "img/skin/10103/101039/shipyard.png"
+    }
+  ]
+}

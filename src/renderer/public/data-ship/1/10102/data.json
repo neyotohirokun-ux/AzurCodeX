@@ -96,7 +96,7 @@
         "efficiency": 1
       }
     },
-      "base": {
+    "base": {
       "health": 265,
       "firepower": 14,
       "torpedo": 52,

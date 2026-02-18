@@ -182,6 +182,11 @@
   border-bottom: none;
 }
 
+.stat-additional {
+  color: #58c95c; /* green for additional stats */
+}
+
+
 /* ===============================
    RESPONSIVE BREAKPOINT
 =================================*/
@@ -203,6 +208,13 @@
   .shipdata-skinlist {
     align-items: center;
   }
+}
+
+/* ===== SECTION BORDER =====*/
+.shipdata-skill-section,
+.shipdata-stats-section,
+.shipdata-retrofit-section {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 
@@ -234,4 +246,38 @@
 
 .shipdata-table tr:last-child td {
   border-bottom: none;
+}
+
+/* ===== Skill ===== */
+.shipdata-skill-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.shipdata-skill-table {
+  width: 40%;
+}
+
+.shipdata-skill-info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shipdata-skill-card {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.shipdata-skill-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.shipdata-skill-details p {
+  margin: 0;
+  font-size: 0.9rem;
 }
