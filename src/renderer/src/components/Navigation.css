@@ -10,22 +10,27 @@
   z-index: 2;
 }
 
-.nav-logo {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-}
-
 .nav-right {
+  position: relative;
   display: flex;
   align-items: center;
   height: 100%;
 }
 
+/* Sliding indicator */
+.nav-indicator {
+  position: absolute;
+  height: 36px;
+  background: #ffffff;
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: 0;
+}
+
 /* All nav items styled the same, separated by vertical line */
 .nav-link,
 .dropdown-toggle {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -55,7 +60,7 @@
 
 /* Active NavLink styling */
 .nav-link.active {
-  background: #ffffff;
+  background: none;
   color: #09a9fb;
   font-weight: 600;
   border-left: 1px solid #ffffff; /* keep line for active */

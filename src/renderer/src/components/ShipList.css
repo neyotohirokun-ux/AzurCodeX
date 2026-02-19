@@ -4,8 +4,6 @@
   gap: 1rem;
   padding: 1rem;
   margin: 0; /* remove extra horizontal margin to prevent scroll */
-  overflow-y: auto;  /* vertical scroll only */
-  max-height: 80vh;  /* optional: vertical scroll limit */
 }
 
 .ship-list-container::-webkit-scrollbar {

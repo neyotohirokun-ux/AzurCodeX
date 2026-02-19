@@ -1,0 +1,25 @@
+{
+    "skins": [ {
+        "id": 101140,
+        "gid": 10114,
+        "name": "Foote",
+        "type": "Default",
+        "desc": "Fletcher-class destroyer - Foote, Hull Number DD-511!",
+        "tag": [],
+        "illustrator": 4,
+        "illustrator2": -1,
+        "voice_actor": 100,
+        "voice_actor2": -1,
+        "bgm": null,
+        "background": null,
+        "background2": null,
+        "painting": "img/skin/10114/101140/painting.png",
+        "painting_n": null,
+        "banner": "img/skin/10114/101140/banner.png",
+        "chibi": "img/skin/10114/101140/chibi.png",
+        "icon": "img/skin/10114/101140/icon.png",
+        "qicon": "img/skin/10114/101140/qicon.png",
+        "shipyard": "img/skin/10114/101140/shipyard.png"
+      }
+    ]
+  }

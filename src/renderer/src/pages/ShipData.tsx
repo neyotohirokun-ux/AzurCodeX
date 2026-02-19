@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { ChevronUp, ChevronDown, ChevronsUp, ChevronsDown } from "lucide-react";
 import { useParams, Link } from "react-router-dom";
 import { useShipData } from "../hooks/useShipData";
 import { useShipSkin } from "../hooks/useShipSkin";
@@ -244,9 +245,22 @@ export const ShipData: React.FC = () => {
                   growthDiff === 0 ? (
                     growthValue.toLocaleString()
                   ) : (
-                    <span className="stat-additional">
-                      ({growthDiff >= 0 ? "↑" : "↓"})
-                      {growthValue.toLocaleString()}
+                    <span
+                      className={`stat-additional ${
+                        growthDiff < 0 ? "stat-negative" : ""
+                      }`}
+                    >
+                      (
+                      {growthDiff >= 100 ? (
+                        <ChevronsUp className="chevron-icon" />
+                      ) : growthDiff > 0 ? (
+                        <ChevronUp className="chevron-icon" />
+                      ) : growthDiff <= -100 ? (
+                        <ChevronsDown className="chevron-icon" />
+                      ) : (
+                        <ChevronDown className="chevron-icon" />
+                      )}
+                      ){growthValue.toLocaleString()}
                     </span>
                   );
 

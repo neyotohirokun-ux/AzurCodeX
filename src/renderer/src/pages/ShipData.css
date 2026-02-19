@@ -127,6 +127,10 @@
   align-items: center;
 }
 
+.shipdata-skin-link {
+  color: #3b82f6;
+}
+
 .shipdata-skins {
   display: flex;
   flex-direction: column;
@@ -184,8 +188,18 @@
 }
 
 .stat-additional {
-  color: #58c95c; /* green for additional stats */
+  color: #58c95c; /* green default */
 }
+
+.stat-negative {
+  color: #e04f4f; /* red for negative */
+}
+
+.chevron-icon {
+  margin-bottom: 4px;
+  vertical-align: middle;
+}
+
 
 
 /* ===============================
